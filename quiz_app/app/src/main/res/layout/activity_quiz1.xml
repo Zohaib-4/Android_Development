@@ -51,50 +51,52 @@
         />
 
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:id="@+id/optQuiz1"
-        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="249dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="20dp"
-        >
+        android:orientation="vertical">
 
         <RadioButton
+            android:id="@+id/opt11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rose"
+            android:background="@drawable/quiz_bg2"
+            android:elevation="5dp"
             android:layoutDirection="rtl"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:id="@+id/opt11"/>
+            android:text="Rose" />
+
         <RadioButton
+            android:id="@+id/opt12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tulip"
-            android:layoutDirection="rtl"
             android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
-            android:id="@+id/opt12"/>
+            android:background="@drawable/quiz_bg2"
+            android:elevation="5dp"
+            android:layoutDirection="rtl"
+            android:text="Tulip" />
+
         <RadioButton
+            android:id="@+id/opt13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jasmine"
-            android:layoutDirection="rtl"
             android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
-            android:id="@+id/opt13"/>
+            android:background="@drawable/quiz_bg2"
+            android:elevation="5dp"
+            android:layoutDirection="rtl"
+            android:text="Jasmine" />
+
         <RadioButton
+            android:id="@+id/opt14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lily"
-            android:layoutDirection="rtl"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:id="@+id/opt14"/>
+            android:background="@drawable/quiz_bg2"
+            android:elevation="5dp"
+            android:layoutDirection="rtl"
+            android:text="Lily" />
 
 
     </RadioGroup>
