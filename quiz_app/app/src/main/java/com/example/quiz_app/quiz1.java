@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class quiz1 extends AppCompatActivity {
 
-    TextView quizQuestion;
+    TextView quizQuestion, quesNumber;
     Button btnPrevious, btnNext;
     RadioGroup optQuiz;
     RadioButton opt1, opt2, opt3, opt4;
@@ -26,7 +26,7 @@ public class quiz1 extends AppCompatActivity {
             "Who was the first Prime Minister of Pakistan?",
             "Which river is the longest in Pakistan?",
             "What is the capital of Balochistan province?",
-            "When did Pakistan become a nuclear power?",
+            "Which city is known as the 'Heart of Pakistan'?",
             "Which of these is the highest peak in Pakistan?",
             "Which of these cities is known as the 'City of Lights'?",
             "Which Pakistani cricketer scored the fastest century in ODI cricket (as of 2025)?",
@@ -39,7 +39,7 @@ public class quiz1 extends AppCompatActivity {
             {"Liaquat Ali Khan", "Zulfikar Ali Bhutto", "Muhammad Ali Jinnah", "Ayub Khan"},
             {"Ravi", "Sutlej", "Indus", "Jhelum"},
             {"Gwadar", "Quetta", "Khuzdar", "Turbat"},
-            {"1996", "1998", "2000", "1995"},
+            {"Karachi", "Islamabad", "Lahore", "Peshawar"},
             {"Nanga Parbat", "Broad Peak", "Rakaposhi", "K2"},
             {"Lahore", "Karachi", "Islamabad", "Peshawar"},
             {"Fakhar Zaman", "Babar Azam", "Shahid Afridi", "Imam-ul-Haq"},
@@ -47,7 +47,7 @@ public class quiz1 extends AppCompatActivity {
             {"Liaquat Ali Khan", "Amiruddin Kidwai", "Chaudhry Rehmat Ali", "Allama Iqbal"}
     };
 
-    int[] correctAnswers = {3, 0, 2, 1, 1, 3, 1, 0, 1, 1};
+    int[] correctAnswers = {3, 0, 2, 1, 2, 3, 1, 0, 1, 1};
 
     int currIndex = 0;
     int score = 0;
@@ -67,6 +67,7 @@ public class quiz1 extends AppCompatActivity {
         quizQuestion = findViewById(R.id.quizQuestion);
         btnPrevious = findViewById(R.id.btnPrevious);
         btnNext = findViewById(R.id.btnNext);
+        quesNumber = findViewById(R.id.quesNumber);
 
         optQuiz = findViewById(R.id.optQuiz);
         opt1 = findViewById(R.id.opt1);
@@ -104,6 +105,7 @@ public class quiz1 extends AppCompatActivity {
 
         btnPrevious.setEnabled(currIndex > 0);
         btnNext.setText(currIndex == questions.length - 1 ? "Finish" : "Next");
+        quesNumber.setText((currIndex + 1) + "/10");
     }
 
     private void checkAnswer() {
