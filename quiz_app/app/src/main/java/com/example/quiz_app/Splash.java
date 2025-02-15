@@ -13,8 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Splash extends AppCompatActivity {
 
-   Animation fading_splash;
-   ImageView spImage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +26,6 @@ public class Splash extends AppCompatActivity {
             return insets;
         });
 
-        spImage = findViewById(R.id.spImage);
-        fading_splash = AnimationUtils.loadAnimation(this, R.anim.fading_splash);
-
-        spImage.startAnimation(fading_splash);
     }
 }
 
