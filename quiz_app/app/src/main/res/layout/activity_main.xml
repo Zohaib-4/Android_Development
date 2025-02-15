@@ -5,16 +5,29 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_secondary_variant"
+    android:background="#009688"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/circle_logo"
+        android:layout_marginTop="130dp"
+        />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="100dp"
         android:text="@string/etEnterName"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
 
         />
 
@@ -29,17 +42,22 @@
         android:gravity="center"
         android:hint="John Doe..."
         android:inputType="textPersonName"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+
+        />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="150dp"
         android:layout_marginRight="15dp"
-        android:textColorLink="@color/btnStartColour"
+        android:backgroundTint="#E9A03E"
+        android:onClick="btnStartClick"
         android:text="@string/btn_start"
 
-        />
+        android:textColorLink="@color/btnStartColour"
+        tools:ignore="OnClick" />
 </LinearLayout>
