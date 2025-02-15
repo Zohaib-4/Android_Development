@@ -40,6 +40,7 @@ public class Home extends AppCompatActivity {
                 nextActivity(person_name);
             }
         });
+
     }
 
     private void nextActivity(String person_name) {

@@ -54,7 +54,7 @@
         android:textStyle="bold" />
 
     <RadioGroup
-        android:id="@+id/optQuiz1"
+        android:id="@+id/optQuiz"
         android:layout_width="match_parent"
         android:layout_height="249dp"
         android:layout_marginLeft="20dp"

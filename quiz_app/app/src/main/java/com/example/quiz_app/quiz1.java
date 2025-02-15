@@ -1,10 +1,12 @@
 package com.example.quiz_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +18,7 @@ public class quiz1 extends AppCompatActivity {
 
     TextView quizQuestion;
     Button btnPrevious, btnNext;
-    RadioGroup optQuiz1;
+    RadioGroup optQuiz;
     RadioButton opt1, opt2, opt3, opt4;
 
     String[] questions = {
@@ -65,7 +67,62 @@ public class quiz1 extends AppCompatActivity {
         quizQuestion = findViewById(R.id.quizQuestion);
         btnPrevious = findViewById(R.id.btnPrevious);
         btnNext = findViewById(R.id.btnNext);
-        optQuiz1 = findViewById(R.id.optQuiz1);
 
+        optQuiz = findViewById(R.id.optQuiz);
+        opt1 = findViewById(R.id.opt1);
+        opt2 = findViewById(R.id.opt2);
+        opt3 = findViewById(R.id.opt3);
+        opt4 = findViewById(R.id.opt4);
+
+        loadQuestion();
+
+        btnNext.setOnClickListener(v -> {
+            checkAnswer();
+            currIndex++;
+            if (currIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        });
+
+        btnPrevious.setOnClickListener(v -> {
+            checkAnswer();
+            currIndex--;
+            if (currIndex >= 0) {
+                loadQuestion();
+            }
+        });
     }
+    private void loadQuestion() {
+        quizQuestion.setText(questions[currIndex]);
+        opt1.setText(options[currIndex][0]);
+        opt2.setText(options[currIndex][1]);
+        opt3.setText(options[currIndex][2]);
+        opt4.setText(options[currIndex][3]);
+        optQuiz.clearCheck();
+
+        btnPrevious.setEnabled(currIndex > 0);
+        btnNext.setText(currIndex == questions.length - 1 ? "Finish" : "Next");
+    }
+
+    private void checkAnswer() {
+        int selectedId = optQuiz.getCheckedRadioButtonId();
+        RadioButton selectedRadioButton = findViewById(selectedId);
+        int selectedIndex = optQuiz.indexOfChild(selectedRadioButton);
+        if (selectedIndex == correctAnswers[currIndex]) {
+            score++;
+        }
+    }
+
+    private void showResult() {
+        Toast.makeText(this, "Quiz Over! Your Score: " + score, Toast.LENGTH_LONG).show();
+        finish(); // Close the quiz
+//        Intent intent = new Intent(quiz1.this, Result.class);
+//        intent.putExtra("SCORE", score);
+//        intent.putExtra("TOTAL_QUESTIONS", questions.length);
+//        startActivity(intent);
+//        finish();
+    }
+
 }
