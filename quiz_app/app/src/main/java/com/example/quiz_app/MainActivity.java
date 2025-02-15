@@ -1,6 +1,8 @@
 package com.example.quiz_app;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -33,5 +35,11 @@ public class MainActivity extends AppCompatActivity {
         fading_splash = AnimationUtils.loadAnimation(this, R.anim.fading_splash);
 
         spImage.startAnimation(fading_splash);
+
+        new Handler()
+                .postDelayed(()->{
+                    startActivity(new Intent(MainActivity.this, Home.class));
+                    finish();
+                }, 5);
     }
 }
