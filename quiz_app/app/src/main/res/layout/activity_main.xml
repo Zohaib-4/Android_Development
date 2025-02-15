@@ -10,14 +10,13 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/logoImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
         android:src="@drawable/circle_logo"
         android:layout_marginTop="130dp"
-        />
+        tools:ignore="ContentDescription" />
 
 
     <TextView
@@ -28,7 +27,7 @@
         android:text="@string/etEnterName"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
-
+        android:textStyle="bold"
         />
 
 
@@ -39,25 +38,26 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:background="@drawable/edittext_bg"
         android:gravity="center"
-        android:hint="John Doe..."
+        android:hint="Zohaib Gujjar..."
         android:inputType="textPersonName"
-        android:textSize="18sp"
+        android:padding="13dp"
         android:textColor="#FFFFFF"
-
-        />
+        android:textSize="25sp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="150dp"
         android:layout_marginRight="15dp"
         android:backgroundTint="#E9A03E"
         android:onClick="btnStartClick"
         android:text="@string/btn_start"
-
+        android:textSize="25sp"
         android:textColorLink="@color/btnStartColour"
         tools:ignore="OnClick" />
 </LinearLayout>
