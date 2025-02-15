@@ -17,7 +17,7 @@
             android:id="@+id/btnPrevious"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="< Previous"
+            android:text="Previous"
             android:backgroundTint="#CBEFFA"
             android:textColor="#154946"
             android:textSize="17sp"
@@ -32,7 +32,7 @@
             android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:layout_marginStart="70dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="6dp"
 
             />
@@ -62,7 +62,7 @@
         android:orientation="vertical">
 
         <RadioButton
-            android:id="@+id/opt11"
+            android:id="@+id/opt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/quiz_bg2"
@@ -72,7 +72,7 @@
             android:text="Rose" />
 
         <RadioButton
-            android:id="@+id/opt12"
+            android:id="@+id/opt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -83,7 +83,7 @@
             android:text="Tulip" />
 
         <RadioButton
-            android:id="@+id/opt13"
+            android:id="@+id/opt3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -94,7 +94,7 @@
             android:text="Jasmine" />
 
         <RadioButton
-            android:id="@+id/opt14"
+            android:id="@+id/opt4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
