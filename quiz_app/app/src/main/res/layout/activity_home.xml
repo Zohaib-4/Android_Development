@@ -54,9 +54,8 @@
         android:layout_marginTop="150dp"
         android:layout_marginRight="15dp"
         android:backgroundTint="#E9A03E"
-        android:onClick="btnStartClick"
         android:text="@string/btn_start"
-        android:textSize="25sp"
         android:textColorLink="@color/btnStartColour"
+        android:textSize="25sp"
         tools:ignore="OnClick" />
 </LinearLayout>
