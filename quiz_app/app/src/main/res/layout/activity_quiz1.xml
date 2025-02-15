@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:text="< Previous"
             android:backgroundTint="#CBEFFA"
-            android:textColor="@color/black"
+            android:textColor="#154946"
+            android:textSize="17sp"
 
             />
 
@@ -40,15 +41,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What is the national flower of Pakistan?"
-        android:gravity="center"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/quiz_bg1"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/quiz_bg1"
         android:elevation="20dp"
+        android:fontFamily="@font/akatab"
+        android:gravity="center"
+        android:text="What is the national flower of Pakistan?"
 
-        />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/optQuiz1"
@@ -66,6 +69,7 @@
             android:background="@drawable/quiz_bg2"
             android:elevation="5dp"
             android:layoutDirection="rtl"
+            android:textStyle="bold"
             android:text="Rose" />
 
         <RadioButton
@@ -76,6 +80,7 @@
             android:background="@drawable/quiz_bg2"
             android:elevation="5dp"
             android:layoutDirection="rtl"
+            android:textStyle="bold"
             android:text="Tulip" />
 
         <RadioButton
@@ -86,6 +91,7 @@
             android:background="@drawable/quiz_bg2"
             android:elevation="5dp"
             android:layoutDirection="rtl"
+            android:textStyle="bold"
             android:text="Jasmine" />
 
         <RadioButton
@@ -96,6 +102,7 @@
             android:background="@drawable/quiz_bg2"
             android:elevation="5dp"
             android:layoutDirection="rtl"
+            android:textStyle="bold"
             android:text="Lily" />
 
 
@@ -106,9 +113,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:backgroundTint="#E9A03E"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#154946"
         android:text="@string/Next"
         android:textSize="25sp"
         tools:ignore="OnClick" />
