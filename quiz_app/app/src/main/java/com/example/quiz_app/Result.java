@@ -41,15 +41,21 @@ public class Result extends AppCompatActivity {
         PersonName.setText(person_name);
         ScoreResult.setText((score) + "/10");
 
-//        btnPrevResult.setOnClickListener(v -> {
-//            onPrevPressed();
-//        });
+        btnPrevResult.setOnClickListener(v -> {
+            onPrevPressed();
+        });
 
         btnShareScore.setOnClickListener(v -> {
             shareToEmail();
         });
 
 
+    }
+
+    private void onPrevPressed() {
+        Intent intent = new Intent(Result.this, quiz1.class);
+        startActivity(intent);
+        finish();
     }
     private void shareToEmail() {
         String person_name = getIntent().getStringExtra("person_name");
