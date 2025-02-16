@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/result" />
+        android:src="@drawable/res" />
 
     <!-- Quiz Content -->
     <LinearLayout
@@ -71,8 +71,8 @@
         android:text="2/10"
         android:layout_marginTop="390dp"
         android:layout_centerHorizontal="true"
-        android:textSize="45sp"
-        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textColor="#009688"
         android:textStyle="bold"
 
         />
@@ -86,7 +86,7 @@
         android:layout_centerHorizontal="true"
         android:backgroundTint="#3AA6B6"
         android:layout_marginHorizontal="20dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:paddingHorizontal="25dp"
