@@ -122,6 +122,7 @@ public class quiz1 extends AppCompatActivity {
 //        finish(); // Close the quiz
         Intent intent = new Intent(quiz1.this, Result.class);
         intent.putExtra("SCORE", score);
+        intent.putExtra("person_name", getIntent().getStringExtra("person_name"));
         startActivity(intent);
         finish();
     }
