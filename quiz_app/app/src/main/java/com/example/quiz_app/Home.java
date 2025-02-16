@@ -55,6 +55,7 @@ public class Home extends AppCompatActivity {
 
         Intent intent2 = new Intent(Home.this, quiz1.class);
         startActivity(intent2);
+        finish();
     }
 
 }
