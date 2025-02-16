@@ -52,7 +52,9 @@ public class Home extends AppCompatActivity {
 
         Intent intent = new Intent(Home.this, Result.class);
         intent.putExtra("person_name", person_name);
-        startActivity(intent);
+
+        Intent intent2 = new Intent(Home.this, quiz1.class);
+        startActivity(intent2);
     }
 
 }

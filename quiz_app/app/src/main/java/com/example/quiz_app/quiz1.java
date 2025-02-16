@@ -118,13 +118,12 @@ public class quiz1 extends AppCompatActivity {
     }
 
     private void showResult() {
-        Toast.makeText(this, "Quiz Over! Your Score: " + score, Toast.LENGTH_LONG).show();
-        finish(); // Close the quiz
-//        Intent intent = new Intent(quiz1.this, Result.class);
-//        intent.putExtra("SCORE", score);
-//        intent.putExtra("TOTAL_QUESTIONS", questions.length);
-//        startActivity(intent);
-//        finish();
+//        Toast.makeText(this, "Quiz Over! Your Score: " + score, Toast.LENGTH_LONG).show();
+//        finish(); // Close the quiz
+        Intent intent = new Intent(quiz1.this, Result.class);
+        intent.putExtra("SCORE", score);
+        startActivity(intent);
+        finish();
     }
 
 }

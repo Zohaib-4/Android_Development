@@ -35,20 +35,17 @@ public class Result extends AppCompatActivity {
         int score = getIntent().getIntExtra("SCORE", 0);
         String person_name = getIntent().getStringExtra("person_name");
 
-        PersonName.setText("Zohaib Gujjar");
-        ScoreResult.setText("Your Score: " + score);
+        PersonName.setText(person_name);
+        ScoreResult.setText((score) + "/10");
 
-        btnPrevResult.setOnClickListener(v -> {
-            onPrevPressed();
-        });
+//        btnPrevResult.setOnClickListener(v -> {
+//            onPrevPressed();
+//        });
 
-        btnShareScore.setOnClickListener(v -> {
-            onSharePressed();
-        });
+//        btnShareScore.setOnClickListener(v -> {
+//            onSharePressed();
+//        });
 
-
-
-    }
 
     }
 }
