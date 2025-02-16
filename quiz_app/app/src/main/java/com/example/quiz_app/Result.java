@@ -26,5 +26,29 @@ public class Result extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        PersonName = findViewById(R.id.PersonName);
+        ScoreResult = findViewById(R.id.ScoreResult);
+        btnPrevResult = findViewById(R.id.btnPrevResult);
+        btnShareScore = findViewById(R.id.btnShareScore);
+
+        int score = getIntent().getIntExtra("SCORE", 0);
+        String person_name = getIntent().getStringExtra("person_name");
+
+        PersonName.setText("Zohaib Gujjar");
+        ScoreResult.setText("Your Score: " + score);
+
+        btnPrevResult.setOnClickListener(v -> {
+            onPrevPressed();
+        });
+
+        btnShareScore.setOnClickListener(v -> {
+            onSharePressed();
+        });
+
+
+
+    }
+
     }
 }
