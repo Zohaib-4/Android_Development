@@ -75,12 +75,13 @@
         />
 
     <Button
+        android:id="@+id/btnShareScore"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="Share your Score"
         android:layout_marginTop="600dp"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#A67321"
+        android:backgroundTint="#3AA6B6"
         android:layout_marginHorizontal="20dp"
         android:textSize="35sp"
         android:textColor="@color/white"

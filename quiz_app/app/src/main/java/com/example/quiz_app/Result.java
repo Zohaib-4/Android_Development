@@ -1,6 +1,8 @@
 package com.example.quiz_app;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Result extends AppCompatActivity {
+
+    TextView PersonName, ScoreResult;
+    Button btnPrevResult, btnShareScore;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
