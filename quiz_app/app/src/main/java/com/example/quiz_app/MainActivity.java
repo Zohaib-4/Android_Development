@@ -40,6 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 .postDelayed(()->{
                     startActivity(new Intent(MainActivity.this, Home.class));
                     finish();
-                }, 8000);
+                }, 4000);
     }
 }

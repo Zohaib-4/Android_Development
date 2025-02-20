@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Prev"
-                android:backgroundTint="#1a1c59"
+                android:backgroundTint="#459D94"
                 android:textColor="@color/white"
                 android:textSize="20sp"
 
