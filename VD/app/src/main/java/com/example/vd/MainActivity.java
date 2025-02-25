@@ -22,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        TextView textView = findViewById(R.id.text);
+        TextView textView = findViewById(R.id.tvView);
     }
 }
