@@ -39,7 +39,7 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/edittext_bg"
         android:gravity="center"
-        android:hint="Zohaib Gujjar..."
+        android:hint="e.g, Zohaib Gujjar"
         android:inputType="textPersonName"
         android:padding="13dp"
         android:textColor="#FFFFFF"
