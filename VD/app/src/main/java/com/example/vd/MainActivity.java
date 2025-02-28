@@ -1,9 +1,12 @@
 package com.example.vd;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -23,5 +26,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView textView = findViewById(R.id.tvView);
+
+        RadioButton newbtn;
+
+        int getid = newbtn.getCheckedRadioButtonId();
+        RadioButton getopt = findViewById(R.id.getid)
     }
 }
+
+ActivityResultLauncher<Intent> launchres
