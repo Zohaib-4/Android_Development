@@ -30,8 +30,18 @@ public class MainActivity extends AppCompatActivity {
         RadioButton newbtn;
 
         int getid = newbtn.getCheckedRadioButtonId();
-        RadioButton getopt = findViewById(R.id.getid)
+        RadioButton getopt = findViewById(R.id.getid);
+
+        ActivityResultLauncher<Intent> launchres;
+        launchres.launch(new Intent(this, SecondActivity.class));
+
+    }
+
+    private void launchSecondActivity() {
+
+        launchres.registerForActivtyResult(new ActivityResultContracts.)
     }
 }
 
-ActivityResultLauncher<Intent> launchres
+
+
