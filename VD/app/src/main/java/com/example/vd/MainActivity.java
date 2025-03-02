@@ -25,22 +25,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        TextView textView = findViewById(R.id.tvView);
 
-        RadioButton newbtn;
-
-        int getid = newbtn.getCheckedRadioButtonId();
-        RadioButton getopt = findViewById(R.id.getid);
-
-        ActivityResultLauncher<Intent> launchres;
-        launchres.launch(new Intent(this, SecondActivity.class));
 
     }
 
-    private void launchSecondActivity() {
-
-        launchres.registerForActivtyResult(new ActivityResultContracts.)
-    }
 }
 
 
