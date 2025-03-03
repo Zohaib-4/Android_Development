@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.VD</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b0e88a5-c655-4f8f-b62c-852e5fe28715" name="Changes" comment="Extract string &quot;Welcome to Virtual Doctor!&quot; to strings.xml and use it in activity_main.xml." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\ZOHAIB\.android\avd\Medium_Phone.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Zohaib-4&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Zohaib-4/Android_Development.git&quot;,
+    &quot;accountId&quot;: &quot;97eb9314-fb91-4484-bade-43a6d06be2c4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2tQXYzHhb7IEYbRyc0nHk1zUaDi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Code/VD/VD",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="VD.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b0e88a5-c655-4f8f-b62c-852e5fe28715" name="Changes" comment="" />
+      <created>1740285324413</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740285324413</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit: Setup base Android project structure with UI and app icon.">
+      <option name="closed" value="true" />
+      <created>1740285541233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740285541233</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Replace ConstraintLayout with LinearLayout in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740285753336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740285753336</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Replace ConstraintLayout with LinearLayout in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740285879058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740285879058</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Replace ConstraintLayout with LinearLayout in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740285923102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740285923102</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add project configuration files, update project settings, and adjust activity layout.">
+      <option name="closed" value="true" />
+      <created>1740285952358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740285952358</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add project configuration files, update project settings, and adjust activity layout.">
+      <option name="closed" value="true" />
+      <created>1740286007511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286007511</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Remove unused ImageView in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740286108583</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286108583</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Remove empty TextView and modify Button in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740286236860</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286236860</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Remove the unnecessary Button element in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740286315844</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286315844</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Set ImageView's layout width and height to match_parent.">
+      <option name="closed" value="true" />
+      <created>1740286352024</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286352024</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Remove unused ImageView in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740286373656</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286373656</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Removed the &quot;Hello World!&quot; TextView from activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740286395282</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286395282</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add &quot;Hello World!&quot; TextView to activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1740286418208</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740286418208</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Enable edge-to-edge display in MainActivity.">
+      <option name="closed" value="true" />
+      <created>1740391241162</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1740391241162</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Enable edge-to-edge display and handle system bar insets.">
+      <option name="closed" value="true" />
+      <created>1740391282877</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740391282877</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implement edge-to-edge display and handle system bar insets.">
+      <option name="closed" value="true" />
+      <created>1740502210042</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1740502210042</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add `android:id=&quot;@+id/tvView&quot;` to TextView in activity_main.xml and update corresponding `findViewById` in MainActivity.java.">
+      <option name="closed" value="true" />
+      <created>1740502248990</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740502248990</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Modify MainActivity: Add intent for new activity launch and radio button variable.">
+      <option name="closed" value="true" />
+      <created>1740786834632</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1740786834632</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Refactor app launcher icons and adjust project settings.&#10;&#10;- Changed app launcher icons to use foreground and background.&#10;- Added `ic_launcher_background.xml` to define a white background color.&#10;- Updated `ic_launcher.xml` and `ic_launcher_round.xml` to reference the new background color and mipmap.&#10;- Deleted unnecessary background and foreground files.&#10;- Removed `&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;` from `misc.xml`.&#10;- Added a new `launchres` to  MainActivity and a method `launchSecondActivity`.&#10;- Added new files for `ic_launcher_foreground` in multiple resolutions: hdpi, mdpi, xhdpi, xxhdpi, xxxhdpi.&#10;- Added `ic_launcher-playstore.png`.&#10;- Updated `ic_launcher_round` files for multiple resolutions: hdpi, mdpi, xhdpi, xxhdpi, xxxhdpi.&#10;- Changed the image of `ic_launcher` to be a webp file.">
+      <option name="closed" value="true" />
+      <created>1740915214605</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1740915214605</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Remove unused ActivityResultLauncher and related code.">
+      <option name="closed" value="true" />
+      <created>1740915248606</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1740915248606</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Modified activity_main.xml: Changed text of tvView to &quot;Welcome to New World!&quot;.">
+      <option name="closed" value="true" />
+      <created>1740915277551</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1740915277551</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Update welcome message text in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1741016217764</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741016217764</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Extract string &quot;Welcome to Virtual Doctor!&quot; to strings.xml and use it in activity_main.xml.">
+      <option name="closed" value="true" />
+      <created>1741016255037</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1741016255037</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Initial commit: Setup base Android project structure with UI and app icon." />
+    <MESSAGE value="Replace ConstraintLayout with LinearLayout in activity_main.xml." />
+    <MESSAGE value="Add project configuration files, update project settings, and adjust activity layout." />
+    <MESSAGE value="Remove empty TextView and modify Button in activity_main.xml." />
+    <MESSAGE value="Remove the unnecessary Button element in activity_main.xml." />
+    <MESSAGE value="Set ImageView's layout width and height to match_parent." />
+    <MESSAGE value="Remove unused ImageView in activity_main.xml." />
+    <MESSAGE value="Removed the &quot;Hello World!&quot; TextView from activity_main.xml." />
+    <MESSAGE value="Add &quot;Hello World!&quot; TextView to activity_main.xml." />
+    <MESSAGE value="Enable edge-to-edge display in MainActivity." />
+    <MESSAGE value="Enable edge-to-edge display and handle system bar insets." />
+    <MESSAGE value="Implement edge-to-edge display and handle system bar insets." />
+    <MESSAGE value="Add `android:id=&quot;@+id/tvView&quot;` to TextView in activity_main.xml and update corresponding `findViewById` in MainActivity.java." />
+    <MESSAGE value="Modify MainActivity: Add intent for new activity launch and radio button variable." />
+    <MESSAGE value="Refactor app launcher icons and adjust project settings.&#10;&#10;- Changed app launcher icons to use foreground and background.&#10;- Added `ic_launcher_background.xml` to define a white background color.&#10;- Updated `ic_launcher.xml` and `ic_launcher_round.xml` to reference the new background color and mipmap.&#10;- Deleted unnecessary background and foreground files.&#10;- Removed `&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;` from `misc.xml`.&#10;- Added a new `launchres` to  MainActivity and a method `launchSecondActivity`.&#10;- Added new files for `ic_launcher_foreground` in multiple resolutions: hdpi, mdpi, xhdpi, xxhdpi, xxxhdpi.&#10;- Added `ic_launcher-playstore.png`.&#10;- Updated `ic_launcher_round` files for multiple resolutions: hdpi, mdpi, xhdpi, xxhdpi, xxxhdpi.&#10;- Changed the image of `ic_launcher` to be a webp file." />
+    <MESSAGE value="Remove unused ActivityResultLauncher and related code." />
+    <MESSAGE value="Modified activity_main.xml: Changed text of tvView to &quot;Welcome to New World!&quot;." />
+    <MESSAGE value="Update welcome message text in activity_main.xml." />
+    <MESSAGE value="Extract string &quot;Welcome to Virtual Doctor!&quot; to strings.xml and use it in activity_main.xml." />
+    <option name="LAST_COMMIT_MESSAGE" value="Extract string &quot;Welcome to Virtual Doctor!&quot; to strings.xml and use it in activity_main.xml." />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.example.vd">
+          <value>
+            <CheckInfo lastCheckTimestamp="1741015906534" />
+          </value>
+        </entry>
+        <entry key="com.example.vd.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1741015906534" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
