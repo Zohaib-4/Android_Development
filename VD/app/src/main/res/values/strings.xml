@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VD</string>
+    <string name="welcome_to_virtual_doctor">Welcome to Virtual Doctor!</string>
 </resources>
