@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">quiz_app</string>
+    <string name="app_name">Quiz</string>
     <string name="etEnterName">Enter your name</string>
     <string name="btn_start">Start</string>
     <string name="Next">Next</string>
