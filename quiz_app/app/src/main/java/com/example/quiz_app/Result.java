@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,7 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class Result extends AppCompatActivity {
 
     TextView PersonName, ScoreResult;
-    Button btnPrevResult, btnShareScore;
+    Button btnShareScore;
+    ImageView btnPrevResult;
 
 
     @Override
