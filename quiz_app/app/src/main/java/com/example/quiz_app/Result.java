@@ -52,7 +52,7 @@ public class Result extends AppCompatActivity {
             shareToEmail();
         });
 
-        scoreEmotion();
+        scoreEmoji();
 
     }
     private void onPrevPressed() {
@@ -72,7 +72,7 @@ public class Result extends AppCompatActivity {
             startActivity(intent);
         }
     }
-    private void scoreEmotion() {
+    private void scoreEmoji() {
         int score = getIntent().getIntExtra("SCORE", 0);
         if (score >= 1 && score <= 2) {
             resultEmotion.setImageResource(R.drawable.sad);
