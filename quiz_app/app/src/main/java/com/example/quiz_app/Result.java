@@ -18,7 +18,7 @@ public class Result extends AppCompatActivity {
 
     TextView PersonName, ScoreResult;
     Button btnShareScore;
-    ImageView btnPrevResult;
+    ImageView btnPrevResult, resultEmotion;
 
 
     @Override
@@ -36,6 +36,7 @@ public class Result extends AppCompatActivity {
         ScoreResult = findViewById(R.id.ScoreResult);
         btnPrevResult = findViewById(R.id.btnPrevResult);
         btnShareScore = findViewById(R.id.btnShareScore);
+        resultEmotion = findViewById(R.id.resultEmotion);
 
         int score = getIntent().getIntExtra("SCORE", 0);
         String person_name = getIntent().getStringExtra("person_name");
@@ -51,9 +52,9 @@ public class Result extends AppCompatActivity {
             shareToEmail();
         });
 
+        scoreEmotion();
 
     }
-
     private void onPrevPressed() {
         Intent intent = new Intent(Result.this, quiz1.class);
         startActivity(intent);
@@ -70,5 +71,24 @@ public class Result extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
+    }
+    private void scoreEmotion() {
+        int score = getIntent().getIntExtra("SCORE", 0);
+        if (score >= 1 && score <= 2) {
+            resultEmotion.setImageResource(R.drawable.sad);
+        }
+        if (score >= 3 && score <= 4) {
+            resultEmotion.setImageResource(R.drawable.neutral);
+        }
+        if (score >= 5 && score <= 6) {
+            resultEmotion.setImageResource(R.drawable.smile);
+        }
+        if (score >= 7 && score <= 9) {
+            resultEmotion.setImageResource(R.drawable.happy);
+        }
+        else {
+            resultEmotion.setImageResource(R.drawable.cool);
+        }
+
     }
 }
