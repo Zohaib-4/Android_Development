@@ -66,11 +66,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2/10"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="360dp"
         android:layout_centerHorizontal="true"
         android:textSize="40sp"
         android:textColor="#009688"
         android:textStyle="bold"
+
+        />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/neutral"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="465dp"
 
         />
 
