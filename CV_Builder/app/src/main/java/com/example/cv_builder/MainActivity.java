@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        RelativeLayout splashLayout = findViewById(R.id.splash_layout);
+        RelativeLayout splashLayout = findViewById(R.id.main);
 
         // Load and apply fade-in animation
         Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
