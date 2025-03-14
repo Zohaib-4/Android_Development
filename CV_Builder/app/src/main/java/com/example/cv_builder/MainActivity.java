@@ -37,21 +37,10 @@ public class MainActivity extends AppCompatActivity {
             Animation fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out);
             splashLayout.startAnimation(fadeOut);
 
-            fadeOut.setAnimationListener(new Animation.AnimationListener() {
-                @Override
-                public void onAnimationStart(Animation animation) {}
+            Intent intent = new Intent(MainActivity.this, ActivityHome.class);
+            startActivity(intent);
+            finish();
 
-                @Override
-                public void onAnimationEnd(Animation animation) {
-                    // Start main activity
-                    Intent intent = new Intent(MainActivity.this, ActivityHome.class);
-                    startActivity(intent);
-                    finish(); // Close splash activity
-                }
-
-                @Override
-                public void onAnimationRepeat(Animation animation) {}
-            });
         }, 3000); // Delay of 3 seconds
 
 
