@@ -1,6 +1,10 @@
 package com.example.cv_builder;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onAnimationEnd(Animation animation) {
                     // Start main activity
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this, ActivityHome.class);
                     startActivity(intent);
                     finish(); // Close splash activity
                 }
