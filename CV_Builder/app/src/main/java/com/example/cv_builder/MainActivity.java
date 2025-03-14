@@ -1,6 +1,7 @@
 package com.example.cv_builder;
 
 import android.os.Bundle;
+import android.widget.RelativeLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,33 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        RelativeLayout splashLayout = findViewById(R.id.splash_layout);
+
+        // Load and apply fade-in animation
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        splashLayout.startAnimation(fadeIn);
+
+        // Delay and transition to main activity with fade-out
+        new Handler().postDelayed(() -> {
+            Animation fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out);
+            splashLayout.startAnimation(fadeOut);
+
+            fadeOut.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    // Start main activity
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish(); // Close splash activity
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+        }, 3000); // Delay of 3 seconds
     }
 }
