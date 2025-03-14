@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         splashLayout.startAnimation(fadeIn);
 
         // Delay and transition to main activity with fade-out
-        new Handler().postDelayed(() -> {
+        new Handler()
+            .postDelayed(() -> {
             Animation fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out);
             splashLayout.startAnimation(fadeOut);
 
