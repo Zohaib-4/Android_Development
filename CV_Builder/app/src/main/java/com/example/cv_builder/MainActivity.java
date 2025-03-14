@@ -53,5 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onAnimationRepeat(Animation animation) {}
             });
         }, 3000); // Delay of 3 seconds
+
+
     }
 }
