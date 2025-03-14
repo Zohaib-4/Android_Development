@@ -12,22 +12,20 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CV Builder"
-            android:textSize="48sp"
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cv_logo"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create your perfect CV with ease"
             android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:alpha="0.8" />
+            android:textColor="#FFFFFF" />
 
         <ProgressBar
             android:layout_width="wrap_content"
