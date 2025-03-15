@@ -34,134 +34,39 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <!-- Profile Picture Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="16dp">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/CustomButton"
                     android:text="Profile Picture"
-                    android:textSize="18sp"
-                    android:backgroundTint="@color/white"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
-
-            <!-- Personal Details Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="16dp">
+                    android:textSize="18sp" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/CustomButton"
                     android:text="Personal Details"
-                    android:textSize="18sp"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
+                    android:textSize="18sp" />
 
-            <!-- Summary Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="16dp">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Summary"
-                    android:textSize="18sp"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
-
-            <!-- Education Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="16dp">
+                    style="@style/CustomButton"
+                    android:text="Summary" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Education"
-                    android:textSize="18sp"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
-
-            <!-- Experience Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="16dp">
+                    style="@style/CustomButton"
+                    android:text="Education" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Experience"
-                    android:textSize="18sp"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
+                    style="@style/CustomButton"
+                    android:text="Experience" />
 
-            <!-- Certifications Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="16dp">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Certifications"
-                    android:textSize="18sp"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
+                    style="@style/CustomButton"
+                    android:text="Certifications" />
 
-            <!-- References Section -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/white"
-                android:layout_marginBottom="16dp">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="References"
-                    android:textSize="18sp"
-                    android:background="@android:color/white"
-                    android:padding="16dp"
-                    android:textColor="#000000" />
-            </androidx.cardview.widget.CardView>
+                    style="@style/CustomButton"
+                    android:text="References" />
 
         </LinearLayout>
     </ScrollView>
