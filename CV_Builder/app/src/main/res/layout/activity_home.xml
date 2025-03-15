@@ -36,34 +36,41 @@
 
 
                 <Button
+                    android:id="@+id/btnProfilePic"
                     style="@style/CustomButton"
                     android:text="Profile Picture"
                     android:textSize="18sp" />
 
                 <Button
+                    android:id="@+id/btnPersonalDetails"
                     style="@style/CustomButton"
                     android:text="Personal Details"/>
 
 
                 <Button
+                    android:id="@+id/btnSummary"
                     style="@style/CustomButton"
                     android:text="Summary" />
 
                 <Button
+                    android:id="@+id/btnEducation"
                     style="@style/CustomButton"
                     android:text="Education" />
 
                 <Button
+                    android:id="@+id/btnExperience"
                     style="@style/CustomButton"
                     android:text="Experience" />
 
 
                 <Button
+                    android:id="@+id/btnSkills"
                     style="@style/CustomButton"
-                    android:text="Certifications" />
+                    android:text="Skills &amp; Certifications" />
 
 
                 <Button
+                    android:id="@+id/btnReferences"
                     style="@style/CustomButton"
                     android:text="References" />
 
