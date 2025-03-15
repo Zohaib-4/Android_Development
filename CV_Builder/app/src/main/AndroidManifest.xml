@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CV_Builder"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityEducation"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitySummary"
+            android:exported="false" />
+        <activity
             android:name=".ActivityDetails"
             android:exported="false" />
         <activity
