@@ -42,8 +42,7 @@
 
                 <Button
                     style="@style/CustomButton"
-                    android:text="Personal Details"
-                    android:textSize="18sp" />
+                    android:text="Personal Details"/>
 
 
                 <Button
