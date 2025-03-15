@@ -74,6 +74,11 @@
                     style="@style/CustomButton"
                     android:text="References" />
 
+                <Button
+                    android:id="@+id/btnSubmit"
+                    style="@style/CustomButton"
+                    android:text="Submit CV" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
