@@ -1,6 +1,8 @@
 package com.example.cv_builder;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,14 @@ public class ActivityDP extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView ivProfilePicture = findViewById(R.id.ivProfilePicture);
+        Button btnSelectImage = findViewById(R.id.btnSelectImage);
+
+        btnSelectImage.setOnClickListener(v -> {
+
+
+        });
+
     }
 }
