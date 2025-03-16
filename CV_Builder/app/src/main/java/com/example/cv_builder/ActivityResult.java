@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ActivityResult extends AppCompatActivity {
 
-    ImageView ivReceivedImage;
+    ImageView ivProfilePictureResult;
     TextView tvResult;
 
 
@@ -64,14 +64,15 @@ public class ActivityResult extends AppCompatActivity {
 
     private void getImage() {
 
-//        ivReceivedImage = findViewById(R.id.ivReceivedImage);
-
+//        ivProfilePictureResult = findViewById(R.id.ivProfilePictureResult);
 //
-//        // Get the image URI from intent
-//        String imageUriString = getIntent().getStringExtra("imageUri");
+//        // Retrieve the image URI from SharedPreferences
+//        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+//        String imageUriString = sharedPreferences.getString("profileImageUri", null);
+//
 //        if (imageUriString != null) {
 //            Uri imageUri = Uri.parse(imageUriString);
-//            ivReceivedImage.setImageURI(imageUri);
+//            ivProfilePictureResult.setImageURI(imageUri);
 //        } else {
 //            Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
 //        }
