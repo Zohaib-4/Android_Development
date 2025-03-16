@@ -14,36 +14,34 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_marginTop="50dp">
 
     <ImageView
         android:id="@+id/ivProfilePicture"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="30dp"
         android:src="@drawable/ic_profile_placeholder"
         android:background="@drawable/circle_background"
-        android:layout_marginBottom="30dp"
-        android:layout_gravity="center"
+        android:layout_centerInParent="true"
         />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignBottom="@id/ivProfilePicture"
             android:layout_alignParentRight="true"
             android:layout_margin="40dp"
             android:src="@drawable/icon_camera"
-            android:id="@+id/fab_setProfilePic"
+            android:id="@+id/setProfilePic"
             />
 
     </RelativeLayout>
 
-    <!-- Button to Select Image -->
     <Button
         android:id="@+id/btnSelectImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center"
         android:textSize="18sp"
         android:backgroundTint="#E7D538"
