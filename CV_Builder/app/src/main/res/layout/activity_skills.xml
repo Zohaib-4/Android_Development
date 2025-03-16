@@ -46,38 +46,48 @@
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipPython"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:text="Python"
                     android:checkable="true"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipDjango"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:text="Django"
                     android:checkable="true"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipReact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:text="React"
                     android:checkable="true"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:text="Machine Learning"
                     android:checkable="true"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipBlockchain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:text="Blockchain"
                     android:checkable="true"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
             </com.google.android.material.chip.ChipGroup>
 
             <!-- Certifications Section -->
@@ -106,13 +116,6 @@
                 style="@style/CustomButton"
                 android:text="Add Certification"
                 android:textSize="16sp"
-                android:layout_marginTop="10dp" />
-
-            <!-- RecyclerView for Certifications List -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewCertifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp" />
 
             <!-- Save Button -->
