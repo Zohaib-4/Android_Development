@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.service.controls.actions.FloatAction;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,6 +18,11 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ActivityDP extends AppCompatActivity {
+
+    ImageView ivProfilePicture;
+    Button btnSelectImage;
+    FloatingActionButton setProfilePic;
+    ActivityResultLauncher<Intent> getImageLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +35,7 @@ public class ActivityDP extends AppCompatActivity {
             return insets;
         });
 
-        ImageView ivProfilePicture = findViewById(R.id.ivProfilePicture);
-        Button btnSelectImage = findViewById(R.id.btnSelectImage);
-        FloatingActionButton setProfilePic = findViewById(R.id.setProfilePic);
-        ActivityResultLauncher<Intent> getImageLauncher;
+        init();
 
         setProfilePic.setOnClickListener(v -> {
             Intent i = new Intent(Intent.ACTION_PICK);
@@ -39,6 +43,26 @@ public class ActivityDP extends AppCompatActivity {
             getImageLauncher.launch(i);
 
         });
+
+    }
+
+    private void init() {
+        ivProfilePicture = findViewById(R.id.ivProfilePicture);
+        btnSelectImage = findViewById(R.id.btnSelectImage);
+        setProfilePic = findViewById(R.id.setProfilePic);
+
+        getImageLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                (result)->{
+                        if(result.getResultCode() == RESULT_OK && result.getData()!=null)
+                            {
+                                ivProfilePicture.setImageURI(result.getData().getData());
+                            }
+                        else if(result.getResultCode() == RESULT_CANCELED)
+                            {
+                                Toast.makeText(this, "Select the image", Toast.LENGTH_SHORT).show();
+                            }
+                });
+
 
     }
 }
