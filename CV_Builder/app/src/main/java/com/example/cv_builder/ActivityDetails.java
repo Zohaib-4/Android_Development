@@ -121,6 +121,8 @@ public class ActivityDetails extends AppCompatActivity {
                     editor.apply();
 
                     Toast.makeText(ActivityDetails.this, "Data saved successfully", Toast.LENGTH_SHORT).show();
+
+
                 }
             }
         });
