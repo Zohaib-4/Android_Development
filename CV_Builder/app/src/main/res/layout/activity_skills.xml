@@ -1,10 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivitySkills">
+    android:orientation="vertical"
+    android:background="@drawable/splash_background"
+    android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skills &amp; Certifications"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Scrollable Layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Skills Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Skills"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupSkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:singleSelection="false">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPython"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="Python"
+                    android:checkable="true"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDjango"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="Django"
+                    android:checkable="true"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipReact"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="React"
+                    android:checkable="true"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipML"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="Machine Learning"
+                    android:checkable="true"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBlockchain"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="Blockchain"
+                    android:checkable="true"
+                    android:textColor="@color/white" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Certifications Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Certifications"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:id="@+id/etCertification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Certification Name"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0FFFFFF"
+                android:backgroundTint="#80FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="5dp"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnAddCertification"
+                style="@style/CustomButton"
+                android:text="Add Certification"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp" />
+
+            <!-- RecyclerView for Certifications List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCertifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveSkills"
+                style="@style/CustomButton"
+                android:text="Save"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#E7D538"
+                android:padding="13dp"
+                android:textColor="#000000"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
