@@ -20,7 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class ActivityDP extends AppCompatActivity {
 
     ImageView ivProfilePicture;
-    Button btnSelectImage;
+    Button btnSubmitImage;
     FloatingActionButton setProfilePic;
     ActivityResultLauncher<Intent> getImageLauncher;
 
@@ -44,11 +44,15 @@ public class ActivityDP extends AppCompatActivity {
 
         });
 
+        btnSubmitImage.setOnClickListener(v -> {
+            // Handle Submit Image button click
+        });
+
     }
 
     private void init() {
         ivProfilePicture = findViewById(R.id.ivProfilePicture);
-        btnSelectImage = findViewById(R.id.btnSelectImage);
+        btnSubmitImage = findViewById(R.id.btnSubmitImage);
         setProfilePic = findViewById(R.id.setProfilePic);
 
         getImageLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),

@@ -1,6 +1,9 @@
 package com.example.cv_builder;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ActivityResult extends AppCompatActivity {
+
+    ImageView ivReceivedImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,16 @@ public class ActivityResult extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ivReceivedImage = findViewById(R.id.ivReceivedImage);
+
+        // Get the image URI from intent
+        String imageUriString = getIntent().getStringExtra("imageUri");
+        if (imageUriString != null) {
+            Uri imageUri = Uri.parse(imageUriString);
+            ivReceivedImage.setImageURI(imageUri);
+        } else {
+            Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
+        }
     }
 }
