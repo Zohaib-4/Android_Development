@@ -1,5 +1,6 @@
 package com.example.cv_builder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,7 +28,8 @@ public class ActivityDP extends AppCompatActivity {
         Button btnSelectImage = findViewById(R.id.btnSelectImage);
 
         btnSelectImage.setOnClickListener(v -> {
-
+            Intent i = new Intent(Intent.ACTION_PICK);
+            i.setType("image/*");
 
         });
 
