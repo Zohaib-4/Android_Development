@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -30,11 +31,12 @@ public class ActivityDP extends AppCompatActivity {
         ImageView ivProfilePicture = findViewById(R.id.ivProfilePicture);
         Button btnSelectImage = findViewById(R.id.btnSelectImage);
         FloatingActionButton setProfilePic = findViewById(R.id.setProfilePic);
-        Laun
+        ActivityResultLauncher<Intent> getImageLauncher;
 
         setProfilePic.setOnClickListener(v -> {
             Intent i = new Intent(Intent.ACTION_PICK);
             i.setType("image/*");
+            getImageLauncher.launch(i);
 
         });
 
