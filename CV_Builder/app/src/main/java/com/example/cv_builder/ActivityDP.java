@@ -2,6 +2,7 @@ package com.example.cv_builder;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.controls.actions.FloatAction;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -10,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ActivityDP extends AppCompatActivity {
 
@@ -26,8 +29,10 @@ public class ActivityDP extends AppCompatActivity {
 
         ImageView ivProfilePicture = findViewById(R.id.ivProfilePicture);
         Button btnSelectImage = findViewById(R.id.btnSelectImage);
+        FloatingActionButton setProfilePic = findViewById(R.id.setProfilePic);
+        Laun
 
-        btnSelectImage.setOnClickListener(v -> {
+        setProfilePic.setOnClickListener(v -> {
             Intent i = new Intent(Intent.ACTION_PICK);
             i.setType("image/*");
 
