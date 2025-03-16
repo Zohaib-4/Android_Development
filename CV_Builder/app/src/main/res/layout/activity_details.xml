@@ -71,6 +71,18 @@
                 android:layout_marginTop="10dp"
                 android:inputType="phone" />
 
+            <EditText
+                android:id="@+id/etArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0FFFFFF"
+                android:backgroundTint="#80FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text" />
+
             <!-- Gender Selection -->
             <TextView
                 android:layout_width="wrap_content"
