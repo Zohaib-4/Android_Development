@@ -1,6 +1,8 @@
 package com.example.cv_builder;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -29,13 +31,7 @@ public class ActivityDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_details);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         etFullName = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etEmail);
@@ -48,20 +44,16 @@ public class ActivityDetails extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
 
         // Setup Country Spinner
-        String[] countries = {
-                "Select Country", "Pakistan", "United States", "Brazil",
-                "Japan", "Germany", "Australia", "India", "South Africa"
-        };
+        String[] countries = {"Select Country", "Pakistan", "United States", "Brazil",
+                "Japan", "Germany", "Australia", "India", "South Africa"};
         ArrayAdapter<String> countryAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, countries);
         countryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spCountry.setAdapter(countryAdapter);
 
         // Setup City Spinner (Pakistani cities)
-        String[] cities = {
-                "Select City", "Karachi", "Lahore", "Islamabad",
-                "Rawalpindi", "Faisalabad", "Multan", "Peshawar", "Quetta"
-        };
+        String[] cities = {"Select City", "Karachi", "Lahore", "Islamabad",
+                "Rawalpindi", "Faisalabad", "Multan", "Peshawar", "Quetta"};
         ArrayAdapter<String> cityAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, cities);
         cityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -79,7 +71,6 @@ public class ActivityDetails extends AppCompatActivity {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(
                         ActivityDetails.this,
                         (view, selectedYear, selectedMonth, selectedDay) -> {
-                            // Format the date (month is 0-based, so add 1)
                             String date = String.format("%02d/%02d/%d", selectedDay, selectedMonth + 1, selectedYear);
                             etDob.setText(date);
                         }, year, month, day);
@@ -115,19 +106,24 @@ public class ActivityDetails extends AppCompatActivity {
                     Toast.makeText(ActivityDetails.this,
                             "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    // All fields are filled, process the data
-                    String summary = "Name: " + fullName + "\n" +
-                            "Email: " + email + "\n" +
-                            "Phone: " + phone + "\n" +
-                            "Address: " + area + "\n" +
-                            "Gender: " + gender + "\n" +
-                            "Country: " + country + "\n" +
-                            "City: " + city + "\n" +
-                            "DOB: " + dob;
-                    Toast.makeText(ActivityDetails.this,
-                            "Submitted:\n" + summary, Toast.LENGTH_LONG).show();
+                    // Store data in SharedPreferences
+                    SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                    editor.putString("fullName", fullName);
+                    editor.putString("email", email);
+                    editor.putString("phone", phone);
+                    editor.putString("area", area);
+                    editor.putString("dob", dob);
+                    editor.putString("gender", gender);
+                    editor.putString("country", country);
+                    editor.putString("city", city);
+                    editor.apply();
+
+                    Toast.makeText(ActivityDetails.this, "Data saved successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 }
