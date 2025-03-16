@@ -11,6 +11,11 @@
     tools:context=".ActivityDP">
 
     <!-- Circular ImageView for Profile Picture -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
     <ImageView
         android:id="@+id/ivProfilePicture"
         android:layout_width="300dp"
@@ -21,6 +26,18 @@
         android:layout_marginBottom="30dp"
         android:layout_gravity="center"
         />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivProfilePicture"
+            android:layout_alignParentRight="true"
+            android:layout_margin="40dp"
+            android:src="@drawable/icon_camera"
+            android:id="@+id/fab_setProfilePic"
+            />
+
+    </RelativeLayout>
 
     <!-- Button to Select Image -->
     <Button
@@ -33,6 +50,6 @@
         android:padding="17dp"
         android:textColor="#000000"
         android:elevation="4dp"
-        android:text="Select Picture"/>
+        android:text="Submit Picture"/>
 
 </LinearLayout>
