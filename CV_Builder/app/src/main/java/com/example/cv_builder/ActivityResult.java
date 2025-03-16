@@ -26,15 +26,15 @@ public class ActivityResult extends AppCompatActivity {
             return insets;
         });
 
-        ivReceivedImage = findViewById(R.id.ivReceivedImage);
-
-        // Get the image URI from intent
-        String imageUriString = getIntent().getStringExtra("imageUri");
-        if (imageUriString != null) {
-            Uri imageUri = Uri.parse(imageUriString);
-            ivReceivedImage.setImageURI(imageUri);
-        } else {
-            Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
-        }
+//        ivReceivedImage = findViewById(R.id.ivReceivedImage);
+//
+//        // Get the image URI from intent
+//        String imageUriString = getIntent().getStringExtra("imageUri");
+//        if (imageUriString != null) {
+//            Uri imageUri = Uri.parse(imageUriString);
+//            ivReceivedImage.setImageURI(imageUri);
+//        } else {
+//            Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
+//        }
     }
 }

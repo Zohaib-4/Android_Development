@@ -18,8 +18,8 @@
         android:textColor="#FFFFFF"
         android:layout_gravity="center"
         android:paddingBottom="16dp"
-        android:drawableStart="@android:drawable/ic_menu_edit"
-        android:drawablePadding="8dp" />
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@android:drawable/ic_menu_edit" />
 
     <!-- ScrollView to handle long content -->
     <ScrollView
