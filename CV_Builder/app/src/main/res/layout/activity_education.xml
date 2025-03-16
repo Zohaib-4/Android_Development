@@ -1,10 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityEducation">
+    android:orientation="vertical"
+    android:background="@drawable/splash_background"
+    android:paddingTop="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Title: Education Info -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Education Info"
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"
+        android:drawablePadding="8dp" />
+
+    <!-- ScrollView to handle long content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Degree Title Input -->
+            <EditText
+                android:id="@+id/etDegreeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Degree Title (e.g., BSc Computer Science)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0FFFFFF"
+                android:backgroundTint="#80FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text" />
+
+            <!-- Institution Name Input -->
+            <EditText
+                android:id="@+id/etInstitution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Institution Name"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0FFFFFF"
+                android:backgroundTint="#80FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text" />
+
+            <!-- Education Level Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Education Level"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="15dp" />
+
+            <Spinner
+                android:id="@+id/spEducationLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:backgroundTint="#80FFFFFF"
+                android:layout_marginTop="5dp"
+                android:popupBackground="#80000000"
+                android:spinnerMode="dropdown" />
+
+            <!-- Major/Field of Study Input -->
+            <EditText
+                android:id="@+id/etMajor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Major/Field of Study"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0FFFFFF"
+                android:backgroundTint="#80FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:inputType="text" />
+
+
+
+            <!-- Graduation Year Input -->
+            <EditText
+                android:id="@+id/etGradYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Graduation Year (YYYY)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0FFFFFF"
+                android:backgroundTint="#80FFFFFF"
+                android:padding="12dp"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:maxLength="4"
+                android:focusable="false"
+                android:clickable="true" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/CustomButton"
+                android:text="Submit Education"
+                android:layout_width="220dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E7D538"
+                android:padding="13dp"
+                android:textColor="#000000"
+                android:elevation="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

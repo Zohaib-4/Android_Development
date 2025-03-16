@@ -46,12 +46,6 @@
                     style="@style/CustomButton"
                     android:text="Personal Details"/>
 
-
-                <Button
-                    android:id="@+id/btnSummary"
-                    style="@style/CustomButton"
-                    android:text="Summary" />
-
                 <Button
                     android:id="@+id/btnEducation"
                     style="@style/CustomButton"

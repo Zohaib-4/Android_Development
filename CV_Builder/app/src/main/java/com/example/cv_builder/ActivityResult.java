@@ -16,7 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class ActivityResult extends AppCompatActivity {
 
     ImageView ivProfilePictureResult;
-    TextView tvResult;
+    TextView tvDetails;
+    TextView tvEducation;
 
 
     @Override
@@ -32,12 +33,29 @@ public class ActivityResult extends AppCompatActivity {
 
         getImage();
         getData();
+        getEducation();
+
 
 
       }
 
+    private void getEducation() {
+//        tvEducation = findViewById(R.id.tvEducation);
+//
+//        String degreeTitle = getIntent().getStringExtra("degreeTitle");
+//        String institution = getIntent().getStringExtra("institution");
+//        String major = getIntent().getStringExtra("major");
+//        String gradYear = getIntent().getStringExtra("gradYear");
+//        String educationLevel = getIntent().getStringExtra("educationLevel");
+//
+//        // Display received data
+//        String resultText = "Degree: " + degreeTitle + "\nInstitution: " + institution +
+//                "\nMajor: " + major + "\nGraduation Year: " + gradYear + "\nLevel: " + educationLevel;
+//        tvEducation.setText(resultText);
+        }
+
     private void getData() {
-//        tvResult = findViewById(R.id.tvResult);
+//        tvDetails = findViewById(R.id.tvDetails);
 //        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
 //
 //        String fullName = sharedPreferences.getString("fullName", "N/A");
@@ -59,7 +77,7 @@ public class ActivityResult extends AppCompatActivity {
 //                "City: " + city + "\n" +
 //                "DOB: " + dob;
 //
-//        tvResult.setText(resultText);
+//        tvDetails.setText(resultText);
     }
 
     private void getImage() {
