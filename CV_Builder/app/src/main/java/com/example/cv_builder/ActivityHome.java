@@ -23,11 +23,10 @@ public class ActivityHome extends AppCompatActivity {
             return insets;
         });
 
-        Button btnProfilePic, btnPersonalDetails, btnSummary, btnEducation, btnExperience, btnSkills, btnReferences, btnSubmit;
+        Button btnProfilePic, btnPersonalDetails, btnEducation, btnExperience, btnSkills, btnReferences, btnSubmit;
 
         btnProfilePic = findViewById(R.id.btnProfilePic);
         btnPersonalDetails = findViewById(R.id.btnPersonalDetails);
-        btnSummary = findViewById(R.id.btnSummary);
         btnEducation = findViewById(R.id.btnEducation);
         btnExperience = findViewById(R.id.btnExperience);
         btnSkills = findViewById(R.id.btnSkills);
@@ -44,11 +43,6 @@ public class ActivityHome extends AppCompatActivity {
             Intent i = new Intent(ActivityHome.this, ActivityDetails.class);
             startActivity(i);
             // Handle button click
-        });
-
-        btnSummary.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivitySummary.class);
-            startActivity(i);
         });
 
         btnEducation.setOnClickListener(view -> {
