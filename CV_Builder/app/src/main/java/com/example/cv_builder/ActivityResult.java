@@ -18,6 +18,7 @@ public class ActivityResult extends AppCompatActivity {
     ImageView ivProfilePictureResult;
     TextView tvDetails;
     TextView tvEducation;
+    TextView tvCompanyName, tvJobTitle, tvStartDate, tvEndDate, tvResponsibilities, tvTechnologies;
 
 
     @Override
@@ -34,10 +35,38 @@ public class ActivityResult extends AppCompatActivity {
         getImage();
         getData();
         getEducation();
+        getExperience();
+
 
 
 
       }
+
+    private void getExperience() {
+        tvCompanyName = findViewById(R.id.tvCompanyName);
+        tvJobTitle = findViewById(R.id.tvJobTitle);
+        tvStartDate = findViewById(R.id.tvStartDate);
+        tvEndDate = findViewById(R.id.tvEndDate);
+        tvResponsibilities = findViewById(R.id.tvResponsibilities);
+
+        String companyName = getIntent().getStringExtra("companyName");
+        String jobTitle = getIntent().getStringExtra("jobTitle");
+        String startDate = getIntent().getStringExtra("startDate");
+        String endDate = getIntent().getStringExtra("endDate");
+        String responsibilities = getIntent().getStringExtra("responsibilities");
+
+        // Display received data
+
+        String resultText =
+                "Company Name: " + companyName + " " + "Job Title: " + jobTitle + " " +
+                "Start Date: " + startDate + " " + "End Date: " + endDate + " " ;
+
+        tvCompanyName.setText(resultText);
+        tvJobTitle.setText(resultText);
+        tvStartDate.setText(resultText);
+        tvEndDate.setText(resultText);
+        tvResponsibilities.setText(resultText);
+    }
 
     private void getEducation() {
 //        tvEducation = findViewById(R.id.tvEducation);
