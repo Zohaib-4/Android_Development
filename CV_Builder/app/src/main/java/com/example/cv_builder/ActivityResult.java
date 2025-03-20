@@ -44,6 +44,9 @@ public class ActivityResult extends AppCompatActivity {
 
       }
 
+    private void getSkills() {
+    }
+
     private void getExperience() {
 //        tvCompanyName = findViewById(R.id.tvCompanyName);
 //        tvJobTitle = findViewById(R.id.tvJobTitle);
