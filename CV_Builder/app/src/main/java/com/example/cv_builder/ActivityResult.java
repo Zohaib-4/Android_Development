@@ -36,6 +36,8 @@ public class ActivityResult extends AppCompatActivity {
         getData();
         getEducation();
         getExperience();
+        getSkills();
+        getReferences();
 
 
 
