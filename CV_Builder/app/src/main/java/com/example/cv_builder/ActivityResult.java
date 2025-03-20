@@ -44,6 +44,9 @@ public class ActivityResult extends AppCompatActivity {
 
       }
 
+    private void getReferences() {
+    }
+
     private void getSkills() {
     }
 
