@@ -18,10 +18,11 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
+
 public class ActivityRef extends AppCompatActivity {
 
-    EditText etRef1Name, etRef1JobTitle, etRef1Company, etRef1Email, etRef1Phone;
-    EditText etRef2Name, etRef2JobTitle, etRef2Company, etRef2Email, etRef2Phone;
+
+    EditText etRefName, etRefJobTitle, etRefCompany, etRefEmail, etRefPhone;
     Button btnSaveReferences;
 
     @Override
@@ -35,19 +36,12 @@ public class ActivityRef extends AppCompatActivity {
             return insets;
         });
 
-        // Initialize EditText fields for Reference 1
-        etRef1Name = findViewById(R.id.etRef1Name);
-        etRef1JobTitle = findViewById(R.id.etRef1JobTitle);
-        etRef1Company = findViewById(R.id.etRef1Company);
-        etRef1Email = findViewById(R.id.etRef1Email);
-        etRef1Phone = findViewById(R.id.etRef1Phone);
 
-        // Initialize EditText fields for Reference 2
-        etRef2Name = findViewById(R.id.etRef2Name);
-        etRef2JobTitle = findViewById(R.id.etRef2JobTitle);
-        etRef2Company = findViewById(R.id.etRef2Company);
-        etRef2Email = findViewById(R.id.etRef2Email);
-        etRef2Phone = findViewById(R.id.etRef2Phone);
+        etRefName = findViewById(R.id.etRefName);
+        etRefJobTitle = findViewById(R.id.etRefJobTitle);
+        etRefCompany = findViewById(R.id.etRefCompany);
+        etRefEmail = findViewById(R.id.etRefEmail);
+        etRefPhone = findViewById(R.id.etRefPhone);
 
         btnSaveReferences = findViewById(R.id.btnSaveReferences);
 
@@ -55,25 +49,19 @@ public class ActivityRef extends AppCompatActivity {
     }
 
     private void saveReferences() {
-        // Get user input values
+        // Get user input values and save to SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putString("ref1_name", etRef1Name.getText().toString().trim());
-        editor.putString("ref1_job", etRef1JobTitle.getText().toString().trim());
-        editor.putString("ref1_company", etRef1Company.getText().toString().trim());
-        editor.putString("ref1_email", etRef1Email.getText().toString().trim());
-        editor.putString("ref1_phone", etRef1Phone.getText().toString().trim());
-
-        editor.putString("ref2_name", etRef2Name.getText().toString().trim());
-        editor.putString("ref2_job", etRef2JobTitle.getText().toString().trim());
-        editor.putString("ref2_company", etRef2Company.getText().toString().trim());
-        editor.putString("ref2_email", etRef2Email.getText().toString().trim());
-        editor.putString("ref2_phone", etRef2Phone.getText().toString().trim());
+        editor.putString("ref_name", etRefName.getText().toString().trim());
+        editor.putString("ref_job", etRefJobTitle.getText().toString().trim());
+        editor.putString("ref_company", etRefCompany.getText().toString().trim());
+        editor.putString("ref_email", etRefEmail.getText().toString().trim());
+        editor.putString("ref_phone", etRefPhone.getText().toString().trim());
 
         editor.apply();
 
-        Toast.makeText(ActivityRef.this, "References saved", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ActivityRef.this, "Reference saved", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(ActivityRef.this, ActivityHome.class);
         startActivity(intent);

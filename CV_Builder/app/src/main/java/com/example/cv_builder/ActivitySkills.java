@@ -2,10 +2,14 @@ package com.example.cv_builder;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,11 +25,10 @@ import java.util.ArrayList;
 
 public class ActivitySkills extends AppCompatActivity {
 
-    ChipGroup chipGroupSkills;
-    EditText etCertification;
-    Button btnAddCertification, btnSaveSkills;
+    LinearLayout skillsContainer, certificationsContainer;
+    Button btnAddSkill, btnAddCertification, btnSaveSkills;
     ArrayList<String> certifications = new ArrayList<>();
-    ArrayList<String> selectedSkills = new ArrayList<>();
+    ArrayList<String> skills = new ArrayList<>();
     SharedPreferences sharedPreferences;
 
     @Override
@@ -39,52 +42,78 @@ public class ActivitySkills extends AppCompatActivity {
             return insets;
         });
 
-        chipGroupSkills = findViewById(R.id.chipGroupSkills);
-        etCertification = findViewById(R.id.etCertification);
+        skillsContainer = findViewById(R.id.skillsContainer);
+        certificationsContainer = findViewById(R.id.certificationsContainer);
+        btnAddSkill = findViewById(R.id.btnAddSkill);
         btnAddCertification = findViewById(R.id.btnAddCertification);
         btnSaveSkills = findViewById(R.id.btnSaveSkills);
-
         sharedPreferences = getSharedPreferences("SkillsData", MODE_PRIVATE);
 
-        btnAddCertification.setOnClickListener(v -> {
-            String cert = etCertification.getText().toString().trim();
-            if (!cert.isEmpty()) {
-                certifications.add(cert);
-                etCertification.setText(""); // Clear input field
-                Toast.makeText(ActivitySkills.this, "Certification Added", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(ActivitySkills.this, "Enter a valid certification", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btnAddSkill.setOnClickListener(v -> addNewSkillField());
+        btnAddCertification.setOnClickListener(v -> addNewCertificationField());
+        btnSaveSkills.setOnClickListener(v -> saveSkillsAndCertifications());
+    }
 
-        btnSaveSkills.setOnClickListener(v -> {
-            selectedSkills.clear(); // Clear previous selections
+    private void addNewSkillField() {
+        EditText skillInput = new EditText(this);
+        skillInput.setLayoutParams(new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
+        skillInput.setHint("Enter Skill");
+        skillInput.setTextColor(Color.WHITE);
+        skillsContainer.addView(skillInput);
+    }
 
-            // Get selected skills from chip group
-            for (int i = 0; i < chipGroupSkills.getChildCount(); i++) {
-                Chip chip = (Chip) chipGroupSkills.getChildAt(i);
-                if (chip.isChecked()) {
-                    selectedSkills.add(chip.getText().toString());
+    private void addNewCertificationField() {
+        EditText certificationInput = new EditText(this);
+        certificationInput.setLayoutParams(new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
+        certificationInput.setHint("Enter Certification");
+        certificationInput.setTextColor(Color.WHITE);
+        certificationsContainer.addView(certificationInput);
+    }
+
+    private void saveSkillsAndCertifications() {
+        skills.clear();
+        certifications.clear();
+
+        // Retrieve all entered skills
+        for (int i = 0; i < skillsContainer.getChildCount(); i++) {
+            View view = skillsContainer.getChildAt(i);
+            if (view instanceof EditText) {
+                String skill = ((EditText) view).getText().toString().trim();
+                if (!skill.isEmpty()) {
+                    skills.add(skill);
                 }
             }
+        }
 
-            // Ensure at least one skill is selected
-            if (selectedSkills.isEmpty()) {
-                Toast.makeText(ActivitySkills.this, "Select at least one skill", Toast.LENGTH_SHORT).show();
-                return;
+        // Retrieve all entered certifications
+        for (int i = 0; i < certificationsContainer.getChildCount(); i++) {
+            View view = certificationsContainer.getChildAt(i);
+            if (view instanceof EditText) {
+                String certification = ((EditText) view).getText().toString().trim();
+                if (!certification.isEmpty()) {
+                    certifications.add(certification);
+                }
             }
+        }
 
-            // Store data in SharedPreferences
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("skills", TextUtils.join(",", selectedSkills)); // Convert list to comma-separated string
-            editor.putString("certifications", TextUtils.join(",", certifications));
-            editor.apply();
+        if (skills.isEmpty()) {
+            Toast.makeText(this, "Enter at least one skill", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            Toast.makeText(ActivitySkills.this, "Skills and Certifications saved", Toast.LENGTH_SHORT).show();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("skills", TextUtils.join(",", skills));
+        editor.putString("certifications", TextUtils.join(",", certifications));
+        editor.apply();
 
-            Intent intent = new Intent(ActivitySkills.this, ActivityHome.class);
-            startActivity(intent);
-            finish();
-        });
+        Toast.makeText(this, "Skills and Certifications saved", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(ActivitySkills.this, ActivityHome.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -33,63 +33,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select Your Skills"
+                android:text="Enter Your Skills"
                 android:textSize="16sp"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="10dp" />
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroupSkills"
+            <LinearLayout
+                android:id="@+id/skillsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:singleSelection="false">
+                android:orientation="vertical" />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipPython"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Python"
-                    android:checkable="true"
-                    android:textColor="@color/black" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipDjango"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Django"
-                    android:checkable="true"
-                    android:textColor="@color/black" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipReact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="React"
-                    android:checkable="true"
-                    android:textColor="@color/black" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipML"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Machine Learning"
-                    android:checkable="true"
-                    android:textColor="@color/black" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipBlockchain"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Blockchain"
-                    android:checkable="true"
-                    android:textColor="@color/black" />
-            </com.google.android.material.chip.ChipGroup>
+            <Button
+                android:id="@+id/btnAddSkill"
+                style="@style/CustomButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Add Skill"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp" />
 
             <!-- Certifications Section -->
             <TextView
@@ -100,21 +62,17 @@
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="15dp" />
 
-            <EditText
-                android:id="@+id/etCertification"
+            <LinearLayout
+                android:id="@+id/certificationsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Certification Name"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#B0FFFFFF"
-                android:backgroundTint="#80FFFFFF"
-                android:padding="12dp"
-                android:layout_marginTop="5dp"
-                android:inputType="text" />
+                android:orientation="vertical" />
 
             <Button
                 android:id="@+id/btnAddCertification"
                 style="@style/CustomButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:text="Add Certification"
                 android:textSize="16sp"
                 android:layout_marginTop="10dp" />
