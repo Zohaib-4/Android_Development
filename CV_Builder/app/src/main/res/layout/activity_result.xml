@@ -19,20 +19,21 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivProfilePictureResult"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_marginBottom="8dp"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
                 android:background="@android:drawable/picture_frame"
                 android:scaleType="centerCrop"
-                android:src="@android:drawable/ic_menu_gallery" />
+                android:src="@drawable/ic_profile_placeholder" />
 
             <TextView
                 android:id="@+id/tvFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Full Name: N/A"
+                android:text="N/A"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -42,7 +43,7 @@
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email: N/A"
+                android:text="N/A"
                 android:textSize="14sp"
                 android:textColor="#000000"
                 android:layout_marginBottom="2dp" />
@@ -51,7 +52,7 @@
                 android:id="@+id/tvPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone: N/A"
+                android:text="N/A"
                 android:textSize="14sp"
                 android:textColor="#000000"
                 android:layout_marginBottom="16dp" />

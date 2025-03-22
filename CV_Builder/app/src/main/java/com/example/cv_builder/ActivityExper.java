@@ -107,5 +107,9 @@ public class ActivityExper extends AppCompatActivity {
 
         Toast.makeText(this, "Experience details saved successfully", Toast.LENGTH_SHORT).show();
 
+        Intent intent = new Intent(ActivityExper.this, ActivityHome.class);
+        startActivity(intent);
+        finish();
+
     }
 }

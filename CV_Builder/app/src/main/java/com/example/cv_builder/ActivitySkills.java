@@ -81,6 +81,10 @@ public class ActivitySkills extends AppCompatActivity {
             editor.apply();
 
             Toast.makeText(ActivitySkills.this, "Skills and Certifications saved", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(ActivitySkills.this, ActivityHome.class);
+            startActivity(intent);
+            finish();
         });
     }
 }

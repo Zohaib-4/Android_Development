@@ -30,8 +30,13 @@ public class ActivityEducation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_education);
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         // Initialize UI components
         etDegreeTitle = findViewById(R.id.etDegreeTitle);
         etInstitution = findViewById(R.id.etInstitution);
@@ -99,5 +104,9 @@ public class ActivityEducation extends AppCompatActivity {
         editor.apply();
 
         Toast.makeText(this, "Education data saved successfully", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(ActivityEducation.this, ActivityHome.class);
+        startActivity(intent);
+        finish();
     }
 }

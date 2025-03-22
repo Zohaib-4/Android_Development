@@ -31,7 +31,13 @@ public class ActivityDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_details);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         etFullName = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etEmail);
@@ -122,6 +128,9 @@ public class ActivityDetails extends AppCompatActivity {
 
                     Toast.makeText(ActivityDetails.this, "Data saved successfully", Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(ActivityDetails.this, ActivityHome.class);
+                    startActivity(intent);
+                    finish();
 
                 }
             }

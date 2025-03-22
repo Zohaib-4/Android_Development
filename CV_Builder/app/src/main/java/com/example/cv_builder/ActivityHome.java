@@ -34,40 +34,41 @@ public class ActivityHome extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
 
         btnProfilePic.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivityDP.class);
-            startActivity(i);
+            Intent i1 = new Intent(ActivityHome.this, ActivityDP.class);
+            startActivity(i1);
 
         });
 
         btnPersonalDetails.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivityDetails.class);
-            startActivity(i);
+            Intent i2 = new Intent(ActivityHome.this, ActivityDetails.class);
+            startActivity(i2);
             // Handle button click
         });
 
         btnEducation.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivityEducation.class);
-            startActivity(i);
+            Intent i3 = new Intent(ActivityHome.this, ActivityEducation.class);
+            startActivity(i3);
         });
 
         btnExperience.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivityExper.class);
-            startActivity(i);
+            Intent i4 = new Intent(ActivityHome.this, ActivityExper.class);
+            startActivity(i4);
         });
 
         btnSkills.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivitySkills.class);
-            startActivity(i);
+            Intent i5 = new Intent(ActivityHome.this, ActivitySkills.class);
+            startActivity(i5);
         });
 
         btnReferences.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivityRef.class);
-            startActivity(i);
+            Intent i6 = new Intent(ActivityHome.this, ActivityRef.class);
+            startActivity(i6);
         });
 
         btnSubmit.setOnClickListener(view -> {
-            Intent i = new Intent(ActivityHome.this, ActivityResult.class);
-            startActivity(i);
+            Intent i7 = new Intent(ActivityHome.this, ActivityResult.class);
+            startActivity(i7);
+            finish();
         });
 
 
