@@ -2,6 +2,7 @@ package com.example.cv_builder;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +19,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
-
 
 public class ActivityEducation extends AppCompatActivity {
 
@@ -88,20 +88,16 @@ public class ActivityEducation extends AppCompatActivity {
             return;
         }
 
-        // Sending data to ActivityResult
-        Intent resultIntent = new Intent(ActivityEducation.this, ActivityResult.class);
-        resultIntent.putExtra("degreeTitle", degreeTitle);
-        resultIntent.putExtra("institution", institution);
-        resultIntent.putExtra("major", major);
-        resultIntent.putExtra("gradYear", gradYear);
-        resultIntent.putExtra("educationLevel", selectedEducationLevel);
-        startActivity(resultIntent);
+        // Save data using SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("EducationData", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("degreeTitle", degreeTitle);
+        editor.putString("institution", institution);
+        editor.putString("major", major);
+        editor.putString("gradYear", gradYear);
+        editor.putString("educationLevel", selectedEducationLevel);
+        editor.apply();
 
-        // Open ActivityHome after submission
-        Intent homeIntent = new Intent(ActivityEducation.this, ActivityHome.class);
-        startActivity(homeIntent);
-
-        // Finish current activity
-        finish();
+        Toast.makeText(this, "Education data saved successfully", Toast.LENGTH_SHORT).show();
     }
 }

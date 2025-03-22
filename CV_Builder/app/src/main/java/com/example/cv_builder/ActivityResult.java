@@ -15,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ActivityResult extends AppCompatActivity {
 
+    ImageView ivProfilePictureResult;
+    TextView tvDegreeTitle, tvInstitution, tvMajor, tvGradYear, tvEducationLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,26 @@ public class ActivityResult extends AppCompatActivity {
     }
 
     private void getEducation() {
+//        tvDegreeTitle = findViewById(R.id.tvDegreeTitle);
+//        tvInstitution = findViewById(R.id.tvInstitution);
+//        tvMajor = findViewById(R.id.tvMajor);
+//        tvGradYear = findViewById(R.id.tvGradYear);
+//        tvEducationLevel = findViewById(R.id.tvEducationLevel);
+//
+//        SharedPreferences sharedPreferences = getSharedPreferences("EducationData", MODE_PRIVATE);
+//
+//        String degreeTitle = sharedPreferences.getString("degreeTitle", "N/A");
+//        String institution = sharedPreferences.getString("institution", "N/A");
+//        String major = sharedPreferences.getString("major", "N/A");
+//        String gradYear = sharedPreferences.getString("gradYear", "N/A");
+//        String educationLevel = sharedPreferences.getString("educationLevel", "N/A");
+//
+//        // Display retrieved data
+//        tvDegreeTitle.setText("Degree Title: " + degreeTitle);
+//        tvInstitution.setText("Institution: " + institution);
+//        tvMajor.setText("Major: " + major);
+//        tvGradYear.setText("Graduation Year: " + gradYear);
+//        tvEducationLevel.setText("Education Level: " + educationLevel);
 //
         }
 
