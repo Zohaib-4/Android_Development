@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">CV Builder</string>
+    
+    <!-- Main Activity -->
+    <string name="profile_picture">Profile Picture</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="summary">Summary</string>
+    <string name="education">Education</string>
+    <string name="experience">Experience</string>
+    <string name="certifications">Certifications</string>
+    <string name="references">References</string>
+    <string name="preview_cv">Preview CV</string>
+    
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="share_cv">Share CV</string>
+    
+    <!-- Personal Details -->
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="dob">Date of Birth</string>
+    
+    <!-- Education -->
+    <string name="degree">Degree</string>
+    <string name="institution">Institution</string>
+    <string name="year">Year</string>
+    <string name="add_education">Add Education</string>
+    
+    <!-- Experience -->
+    <string name="job_title">Job Title</string>
+    <string name="company">Company</string>
+    <string name="duration">Duration</string>
+    <string name="responsibilities">Responsibilities</string>
+    <string name="add_experience">Add Experience</string>
+    
+    <!-- Certifications -->
+    <string name="certification_name">Certification Name</string>
+    <string name="issuing_organization">Issuing Organization</string>
+    <string name="issue_date">Issue Date</string>
+    <string name="add_certification">Add Certification</string>
+    
+    <!-- References -->
+    <string name="reference_name">Reference Name</string>
+    <string name="reference_position">Position</string>
+    <string name="reference_company">Company</string>
+    <string name="reference_contact">Contact</string>
+    <string name="add_reference">Add Reference</string>
+</resources>
+

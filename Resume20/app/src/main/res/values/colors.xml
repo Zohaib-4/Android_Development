@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Vibrant primary color scheme -->
+    <color name="primary">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="accent">#03DAC5</color>
+    <color name="secondary_accent">#FF4081</color>
+    <color name="tertiary_accent">#FFB300</color>
+    
+    <!-- Text colors -->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    
+    <!-- Background colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="medium_gray">#E0E0E0</color>
+    
+    <!-- Section colors -->
+    <color name="education_color">#4CAF50</color>
+    <color name="experience_color">#2196F3</color>
+    <color name="certification_color">#FF9800</color>
+    <color name="reference_color">#9C27B0</color>
+    <color name="summary_color">#00BCD4</color>
+    
+    <!-- Gradient colors -->
+    <color name="gradient_start">#6200EE</color>
+    <color name="gradient_end">#03DAC5</color>
+    <color name="gradient_center">#BB86FC</color>
+</resources>
+
