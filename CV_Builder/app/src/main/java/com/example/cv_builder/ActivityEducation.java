@@ -23,9 +23,7 @@ import java.util.Calendar;
 public class ActivityEducation extends AppCompatActivity {
 
     EditText etDegreeTitle, etInstitution, etMajor, etGradYear;
-    Spinner spEducationLevel;
     Button btnSubmit;
-    String selectedEducationLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,25 +40,7 @@ public class ActivityEducation extends AppCompatActivity {
         etInstitution = findViewById(R.id.etInstitution);
         etMajor = findViewById(R.id.etMajor);
         etGradYear = findViewById(R.id.etGradYear);
-        spEducationLevel = findViewById(R.id.spEducationLevel);
         btnSubmit = findViewById(R.id.btnSubmit);
-
-        // Populate the Education Level Spinner
-        String[] educationLevels = {"Select Level", "High School", "Associate's", "Bachelor's", "Master's", "PhD"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, educationLevels);
-        spEducationLevel.setAdapter(adapter);
-
-        spEducationLevel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selectedEducationLevel = educationLevels[position];
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                selectedEducationLevel = "Select Level";
-            }
-        });
 
         // Graduation Year Picker
         etGradYear.setOnClickListener(v -> showYearPicker());
@@ -88,7 +68,7 @@ public class ActivityEducation extends AppCompatActivity {
         String major = etMajor.getText().toString().trim();
         String gradYear = etGradYear.getText().toString().trim();
 
-        if (degreeTitle.isEmpty() || institution.isEmpty() || major.isEmpty() || gradYear.isEmpty() || "Select Level".equals(selectedEducationLevel)) {
+        if (degreeTitle.isEmpty() || institution.isEmpty() || major.isEmpty() || gradYear.isEmpty()) {
             Toast.makeText(this, "Please fill all fields correctly", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -100,7 +80,6 @@ public class ActivityEducation extends AppCompatActivity {
         editor.putString("institution", institution);
         editor.putString("major", major);
         editor.putString("gradYear", gradYear);
-        editor.putString("educationLevel", selectedEducationLevel);
         editor.apply();
 
         Toast.makeText(this, "Education data saved successfully", Toast.LENGTH_SHORT).show();

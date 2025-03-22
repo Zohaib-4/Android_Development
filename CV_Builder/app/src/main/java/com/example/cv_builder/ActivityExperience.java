@@ -21,8 +21,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 public class ActivityExperience extends AppCompatActivity {
 
-    EditText etCompanyName, etJobTitle, etStartDate, etEndDate, etResponsibilities;
-    ChipGroup chipGroupTechnologies;
+    EditText etCompanyName, etJobTitle, etStartDate, etEndDate;
     Button btnSubmitExperience;
 
     @Override
@@ -40,14 +39,10 @@ public class ActivityExperience extends AppCompatActivity {
         etJobTitle = findViewById(R.id.etJobTitle);
         etStartDate = findViewById(R.id.etStartDate);
         etEndDate = findViewById(R.id.etEndDate);
-        etResponsibilities = findViewById(R.id.etResponsibilities);
-        chipGroupTechnologies = findViewById(R.id.chipGroupTechnologies);
         btnSubmitExperience = findViewById(R.id.btnSubmitExperience);
 
-        // Start Date Picker
+        // Date Pickers
         etStartDate.setOnClickListener(v -> showDatePickerDialog(etStartDate));
-
-        // End Date Picker
         etEndDate.setOnClickListener(v -> showDatePickerDialog(etEndDate));
 
         // Submit Button Click Listener
@@ -73,18 +68,8 @@ public class ActivityExperience extends AppCompatActivity {
         String jobTitle = etJobTitle.getText().toString().trim();
         String startDate = etStartDate.getText().toString().trim();
         String endDate = etEndDate.getText().toString().trim();
-        String responsibilities = etResponsibilities.getText().toString().trim();
-        ArrayList<String> selectedTechnologies = new ArrayList<>();
 
-        // Get selected technologies
-        for (int i = 0; i < chipGroupTechnologies.getChildCount(); i++) {
-            Chip chip = (Chip) chipGroupTechnologies.getChildAt(i);
-            if (chip.isChecked()) {
-                selectedTechnologies.add(chip.getText().toString());
-            }
-        }
-
-        if (companyName.isEmpty() || jobTitle.isEmpty() || startDate.isEmpty() || endDate.isEmpty() || responsibilities.isEmpty()) {
+        if (companyName.isEmpty() || jobTitle.isEmpty() || startDate.isEmpty() || endDate.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -96,15 +81,13 @@ public class ActivityExperience extends AppCompatActivity {
         editor.putString("jobTitle", jobTitle);
         editor.putString("startDate", startDate);
         editor.putString("endDate", endDate);
-        editor.putString("responsibilities", responsibilities);
-        editor.putString("technologies", String.join(", ", selectedTechnologies)); // Convert ArrayList to a single String
         editor.apply();
 
         Toast.makeText(this, "Experience details saved successfully", Toast.LENGTH_SHORT).show();
 
+        // Navigate to Home Activity
         Intent intent = new Intent(ActivityExperience.this, ActivityHome.class);
         startActivity(intent);
         finish();
-
     }
 }

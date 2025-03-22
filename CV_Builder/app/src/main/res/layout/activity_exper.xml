@@ -85,77 +85,10 @@
                 android:focusable="false"
                 android:clickable="true" />
 
-            <!-- Responsibilities -->
-            <EditText
-                android:id="@+id/etResponsibilities"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Responsibilities"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#B0FFFFFF"
-                android:backgroundTint="#80FFFFFF"
-                android:padding="12dp"
-                android:layout_marginTop="10dp"
-                android:inputType="textMultiLine"
-                android:minLines="3"
-                android:gravity="top" />
 
-            <!-- Technologies Used -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Technologies Used"
-                android:textSize="16sp"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="15dp" />
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroupTechnologies"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:singleSelection="false">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipPython"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Python"
-                    android:checkable="true"
-                    android:textColor="@color/white" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipDjango"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Django"
-                    android:checkable="true"
-                    android:textColor="@color/white" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipReact"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="React"
-                    android:checkable="true"
-                    android:textColor="@color/white" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipML"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Machine Learning"
-                    android:checkable="true"
-                    android:textColor="@color/white" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipBlockchain"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:text="Blockchain"
-                    android:checkable="true"
-                    android:textColor="@color/white" />
-            </com.google.android.material.chip.ChipGroup>
-
-            <!-- Submit Button -->
             <Button
                 android:id="@+id/btnSubmitExperience"
-                style="@style/CustomButton"
                 android:text="Save Experience"
                 android:layout_width="220dp"
                 android:textSize="18sp"
@@ -166,6 +99,7 @@
                 android:elevation="4dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center" />
+
 
         </LinearLayout>
     </ScrollView>

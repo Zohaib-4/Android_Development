@@ -58,27 +58,6 @@
                 android:layout_marginTop="10dp"
                 android:inputType="text" />
 
-            <!-- Education Level Spinner -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Education Level"
-                android:textSize="16sp"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="15dp" />
-
-            <Spinner
-                android:id="@+id/spEducationLevel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:padding="12dp"
-                android:backgroundTint="#80FFFFFF"
-                android:layout_marginTop="5dp"
-                android:popupBackground="#FFFFFF"
-                android:spinnerMode="dropdown" />
-
-            <!-- Major/Field of Study Input -->
             <EditText
                 android:id="@+id/etMajor"
                 android:layout_width="match_parent"
