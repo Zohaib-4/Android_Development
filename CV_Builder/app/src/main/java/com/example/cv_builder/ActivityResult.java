@@ -47,7 +47,7 @@ public class ActivityResult extends AppCompatActivity {
         getReferences();
 
 
-      }
+    }
 
     private void getReferences() {
         tvRef1 = findViewById(R.id.tvRef1);
@@ -131,7 +131,7 @@ public class ActivityResult extends AppCompatActivity {
         tvGradYear.setText("Graduation Year: " + gradYear);
         tvEducationLevel.setText("Education Level: " + educationLevel);
 
-        }
+    }
 
     private void getDetails() {
         tvFullName = findViewById(R.id.tvFullName);
@@ -179,5 +179,5 @@ public class ActivityResult extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
         }
-      }
+    }
 }
