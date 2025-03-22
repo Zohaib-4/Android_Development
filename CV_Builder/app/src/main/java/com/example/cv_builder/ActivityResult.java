@@ -107,17 +107,17 @@ public class ActivityResult extends AppCompatActivity {
 
 
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-        String refName = sharedPreferences.getString("refName", "N/A");
-        String refJob = sharedPreferences.getString("refJob", "N/A");
-        String refCompany = sharedPreferences.getString("refCompany", "N/A");
-        String refEmail = sharedPreferences.getString("refEmail", "N/A");
-        String refPhone = sharedPreferences.getString("refPhone", "N/A");
+        String refName = sharedPreferences.getString("ref_name", "N/A");
+        String refJob = sharedPreferences.getString("ref_job", "N/A");
+        String refCompany = sharedPreferences.getString("ref_company", "N/A");
+        String refEmail = sharedPreferences.getString("ref_email", "N/A");
+        String refPhone = sharedPreferences.getString("ref_phone", "N/A");
 
-        tvRefName.setText(refName);
-        tvRefJob.setText(refJob);
-        tvRefCompany.setText(refCompany);
-        tvRefEmail.setText(refEmail);
-        tvRefPhone.setText(refPhone);
+        tvRefName.setText("Reference Name: " + refName);
+        tvRefJob.setText("Reference Job: " + refJob);
+        tvRefCompany.setText("Reference Company: " + refCompany);
+        tvRefEmail.setText("Reference Email: " + refEmail);
+        tvRefPhone.setText("Reference Phone: " + refPhone);
     }
 
     private void initializer() {

@@ -68,6 +68,7 @@ public class ActivityHome extends AppCompatActivity {
         btnSubmit.setOnClickListener(view -> {
             Intent i7 = new Intent(ActivityHome.this, ActivityResult.class);
             startActivity(i7);
+            finish();
         });
 
 
