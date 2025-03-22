@@ -48,8 +48,8 @@ public class ActivityResult extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No profile image found", Toast.LENGTH_SHORT).show();
         }
-
-
+//
+//
         sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
         String fullName = sharedPreferences.getString("fullName", "N/A");
         String email = sharedPreferences.getString("email", "N/A");
