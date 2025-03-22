@@ -4,13 +4,8 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -24,7 +19,7 @@ import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-public class ActivityExper extends AppCompatActivity {
+public class ActivityExperience extends AppCompatActivity {
 
     EditText etCompanyName, etJobTitle, etStartDate, etEndDate, etResponsibilities;
     ChipGroup chipGroupTechnologies;
@@ -107,7 +102,7 @@ public class ActivityExper extends AppCompatActivity {
 
         Toast.makeText(this, "Experience details saved successfully", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(ActivityExper.this, ActivityHome.class);
+        Intent intent = new Intent(ActivityExperience.this, ActivityHome.class);
         startActivity(intent);
         finish();
 

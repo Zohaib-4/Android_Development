@@ -22,22 +22,16 @@
             android:name=".ActivitySkills"
             android:exported="false" />
         <activity
-            android:name=".ActivityExper"
+            android:name=".ActivityExperience"
             android:exported="false" />
         <activity
             android:name=".ActivityEducation"
-            android:exported="false" />
-        <activity
-            android:name=".ActivitySummary"
             android:exported="false" />
         <activity
             android:name=".ActivityDetails"
             android:exported="false" />
         <activity
             android:name=".ActivityDP"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityTest"
             android:exported="false" />
         <activity
             android:name=".ActivityHome"

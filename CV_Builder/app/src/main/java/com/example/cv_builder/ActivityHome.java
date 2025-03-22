@@ -51,7 +51,7 @@ public class ActivityHome extends AppCompatActivity {
         });
 
         btnExperience.setOnClickListener(view -> {
-            Intent i4 = new Intent(ActivityHome.this, ActivityExper.class);
+            Intent i4 = new Intent(ActivityHome.this, ActivityExperience.class);
             startActivity(i4);
         });
 
