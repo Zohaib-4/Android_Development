@@ -17,16 +17,14 @@ import androidx.core.view.WindowInsetsCompat;
 public class ActivityResult extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
-    ImageView ivProfilePictureResult;
+    ImageView ivProfilePicture;
     TextView tvFullName, tvEmail, tvPhone, tvArea, tvDob, tvGender, tvCountry, tvCity;
-    TextView tvDegreeTitle, tvInstitution, tvMajor, tvGradYear, tvEducationLevel;
-    TextView tvCompanyName, tvJobTitle, tvStartDate, tvEndDate, tvResponsibilities, tvTechnologies;
+    TextView tvRefName, tvRefJob, tvRefCompany, tvRefEmail, tvRefPhone;
     TextView tvSkills, tvCertifications;
-    TextView tvRef1, tvRef2;
+    TextView tvCompanyName, tvJobTitle, tvStartDate, tvEndDate;
+    TextView tvDegreeTitle, tvInstitution, tvMajor, tvGradYear;
 
     Button downloadCV;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,38 +37,58 @@ public class ActivityResult extends AppCompatActivity {
             return insets;
         });
 
-        getImage();
-        getDetails();
-        getEducation();
-        getExperience();
-        getSkills();
-        getReferences();
+        setImage();
+        setInfo();
+        setSummary();
+        setEducation();
+        setExperience();
+        setSkills();
+        setReferences();
+
+        initializer();
+
+        sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+        String imageUriString = sharedPreferences.getString("profileImageUri", null);
+
+        if (imageUriString != null) {
+            Uri imageUri = Uri.parse(imageUriString);
+            ivProfilePicture.setImageURI(imageUri);
+        } else {
+            Toast.makeText(this, "No profile image found", Toast.LENGTH_SHORT).show();
+        }
 
 
     }
 
-    private void getReferences() {
-        tvRef1 = findViewById(R.id.tvRef1);
-        tvRef2 = findViewById(R.id.tvRef2);
+    private void initializer() {
+        ivProfilePicture = findViewById(R.id.ivProfilePictureResult);
+
+
+    }
+
+    private void setReferences() {
+        tvRefName = findViewById(R.id.tvRefName);
+        tvRefJob = findViewById(R.id.tvRefJob);
+        tvRefCompany = findViewById(R.id.tvRefCompany);
+        tvRefEmail = findViewById(R.id.tvRefEmail);
+        tvRefPhone = findViewById(R.id.tvRefPhone);
+
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
-        String ref1Name = sharedPreferences.getString("ref1_name", "N/A");
-        String ref1Job = sharedPreferences.getString("ref1_job", "N/A");
-        String ref1Company = sharedPreferences.getString("ref1_company", "N/A");
-        String ref1Email = sharedPreferences.getString("ref1_email", "N/A");
-        String ref1Phone = sharedPreferences.getString("ref1_phone", "N/A");
+        String refName = sharedPreferences.getString("refName", "N/A");
+        String refJob = sharedPreferences.getString("refJob", "N/A");
+        String refCompany = sharedPreferences.getString("refCompany", "N/A");
+        String refEmail = sharedPreferences.getString("refEmail", "N/A");
+        String refPhone = sharedPreferences.getString("refPhone", "N/A");
 
-        String ref2Name = sharedPreferences.getString("ref2_name", "N/A");
-        String ref2Job = sharedPreferences.getString("ref2_job", "N/A");
-        String ref2Company = sharedPreferences.getString("ref2_company", "N/A");
-        String ref2Email = sharedPreferences.getString("ref2_email", "N/A");
-        String ref2Phone = sharedPreferences.getString("ref2_phone", "N/A");
-
-        tvRef1.setText("Reference 1:\n" + ref1Name + " - " + ref1Job + " at " + ref1Company + "\nEmail: " + ref1Email + "\nPhone: " + ref1Phone);
-        tvRef2.setText("Reference 2:\n" + ref2Name + " - " + ref2Job + " at " + ref2Company + "\nEmail: " + ref2Email + "\nPhone: " + ref2Phone);
+        tvRefName.setText(refName);
+        tvRefJob.setText(refJob);
+        tvRefCompany.setText(refCompany);
+        tvRefEmail.setText(refEmail);
+        tvRefPhone.setText(refPhone);
     }
 
-    private void getSkills() {
+    private void setSkills() {
         tvSkills = findViewById(R.id.tvSkills);
         tvCertifications = findViewById(R.id.tvCertifications);
 
@@ -83,13 +101,11 @@ public class ActivityResult extends AppCompatActivity {
         tvCertifications.setText("Certifications: " + certifications.replace(",", ", "));
     }
 
-    private void getExperience() {
+    private void setExperience() {
         tvCompanyName = findViewById(R.id.tvCompanyName);
         tvJobTitle = findViewById(R.id.tvJobTitle);
         tvStartDate = findViewById(R.id.tvStartDate);
         tvEndDate = findViewById(R.id.tvEndDate);
-        tvResponsibilities = findViewById(R.id.tvResponsibilities);
-        tvTechnologies = findViewById(R.id.tvTechnologies);
 
         sharedPreferences = getSharedPreferences("ExperienceData", MODE_PRIVATE);
 
@@ -97,46 +113,33 @@ public class ActivityResult extends AppCompatActivity {
         String jobTitle = sharedPreferences.getString("jobTitle", "N/A");
         String startDate = sharedPreferences.getString("startDate", "N/A");
         String endDate = sharedPreferences.getString("endDate", "N/A");
-        String responsibilities = sharedPreferences.getString("responsibilities", "N/A");
-        String technologies = sharedPreferences.getString("technologies", "N/A");
 
         tvCompanyName.setText("Company: " + companyName);
         tvJobTitle.setText("Job Title: " + jobTitle);
         tvStartDate.setText("Start Date: " + startDate);
         tvEndDate.setText("End Date: " + endDate);
-        tvResponsibilities.setText("Responsibilities: " + responsibilities);
-        tvTechnologies.setText("Technologies: " + technologies.replace(",", ", "));
-
     }
 
-    private void getEducation() {
+    private void setEducation() {
         tvDegreeTitle = findViewById(R.id.tvDegreeTitle);
         tvInstitution = findViewById(R.id.tvInstitution);
         tvMajor = findViewById(R.id.tvMajor);
         tvGradYear = findViewById(R.id.tvGradYear);
-        tvEducationLevel = findViewById(R.id.tvEducationLevel);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("EducationData", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("EducationData", MODE_PRIVATE);
 
         String degreeTitle = sharedPreferences.getString("degreeTitle", "N/A");
         String institution = sharedPreferences.getString("institution", "N/A");
         String major = sharedPreferences.getString("major", "N/A");
         String gradYear = sharedPreferences.getString("gradYear", "N/A");
-        String educationLevel = sharedPreferences.getString("educationLevel", "N/A");
 
-        // Display retrieved data
         tvDegreeTitle.setText("Degree Title: " + degreeTitle);
         tvInstitution.setText("Institution: " + institution);
         tvMajor.setText("Major: " + major);
         tvGradYear.setText("Graduation Year: " + gradYear);
-        tvEducationLevel.setText("Education Level: " + educationLevel);
-
     }
 
-    private void getDetails() {
-        tvFullName = findViewById(R.id.tvFullName);
-        tvEmail = findViewById(R.id.tvEmail);
-        tvPhone = findViewById(R.id.tvPhone);
+    private void setSummary() {
         tvArea = findViewById(R.id.tvArea);
         tvDob = findViewById(R.id.tvDob);
         tvGender = findViewById(R.id.tvGender);
@@ -145,19 +148,12 @@ public class ActivityResult extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
 
-        String fullName = sharedPreferences.getString("fullName", "N/A");
-        String email = sharedPreferences.getString("email", "N/A");
-        String phone = sharedPreferences.getString("phone", "N/A");
         String area = sharedPreferences.getString("area", "N/A");
         String dob = sharedPreferences.getString("dob", "N/A");
         String gender = sharedPreferences.getString("gender", "N/A");
         String country = sharedPreferences.getString("country", "N/A");
         String city = sharedPreferences.getString("city", "N/A");
 
-        // Set retrieved data to TextViews
-        tvFullName.setText("Full Name: " + fullName);
-        tvEmail.setText("Email: " + email);
-        tvPhone.setText("Phone: " + phone);
         tvArea.setText("Area: " + area);
         tvDob.setText("Date of Birth: " + dob);
         tvGender.setText("Gender: " + gender);
@@ -165,19 +161,16 @@ public class ActivityResult extends AppCompatActivity {
         tvCity.setText("City: " + city);
     }
 
-    private void getImage() {
+    private void setInfo() {
 
-        ivProfilePictureResult = findViewById(R.id.ivProfilePictureResult);
 
-        // Retrieve the image URI from SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
-        String imageUriString = sharedPreferences.getString("profileImageUri", null);
+        sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+        String fullName = sharedPreferences.getString("fullName", "N/A");
+        String email = sharedPreferences.getString("email", "N/A");
+        String phone = sharedPreferences.getString("phone", "N/A");
 
-        if (imageUriString != null) {
-            Uri imageUri = Uri.parse(imageUriString);
-            ivProfilePictureResult.setImageURI(imageUri);
-        } else {
-            Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
-        }
+        tvFullName.setText(fullName);
+        tvEmail.setText(email);
+        tvPhone.setText(phone);
     }
 }
