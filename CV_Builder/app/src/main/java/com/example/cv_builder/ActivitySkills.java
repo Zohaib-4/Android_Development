@@ -1,7 +1,9 @@
 package com.example.cv_builder;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,6 +26,7 @@ public class ActivitySkills extends AppCompatActivity {
     Button btnAddCertification, btnSaveSkills;
     ArrayList<String> certifications = new ArrayList<>();
     ArrayList<String> selectedSkills = new ArrayList<>();
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +39,12 @@ public class ActivitySkills extends AppCompatActivity {
             return insets;
         });
 
-
         chipGroupSkills = findViewById(R.id.chipGroupSkills);
         etCertification = findViewById(R.id.etCertification);
         btnAddCertification = findViewById(R.id.btnAddCertification);
         btnSaveSkills = findViewById(R.id.btnSaveSkills);
+
+        sharedPreferences = getSharedPreferences("SkillsData", MODE_PRIVATE);
 
         btnAddCertification.setOnClickListener(v -> {
             String cert = etCertification.getText().toString().trim();
@@ -70,17 +74,13 @@ public class ActivitySkills extends AppCompatActivity {
                 return;
             }
 
-            // Prepare data to send to ActivityResult
-            Intent resultIntent = new Intent(ActivitySkills.this, ActivityResult.class);
-            resultIntent.putStringArrayListExtra("skills", selectedSkills);
-            resultIntent.putStringArrayListExtra("certifications", certifications);
-            startActivity(resultIntent); // Open ActivityResult
+            // Store data in SharedPreferences
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("skills", TextUtils.join(",", selectedSkills)); // Convert list to comma-separated string
+            editor.putString("certifications", TextUtils.join(",", certifications));
+            editor.apply();
 
-            // Open ActivityHome
-            Intent homeIntent = new Intent(ActivitySkills.this, ActivityHome.class);
-            startActivity(homeIntent);
-
-            finish(); // Close current activity
+            Toast.makeText(ActivitySkills.this, "Skills and Certifications saved", Toast.LENGTH_SHORT).show();
         });
     }
 }

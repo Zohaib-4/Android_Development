@@ -2,9 +2,15 @@ package com.example.cv_builder;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -18,12 +24,12 @@ import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-
 public class ActivityExper extends AppCompatActivity {
 
     EditText etCompanyName, etJobTitle, etStartDate, etEndDate, etResponsibilities;
     ChipGroup chipGroupTechnologies;
     Button btnSubmitExperience;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,21 +94,18 @@ public class ActivityExper extends AppCompatActivity {
             return;
         }
 
-        // Send data to ActivityResult
-        Intent resultIntent = new Intent(ActivityExper.this, ActivityResult.class);
-        resultIntent.putExtra("companyName", companyName);
-        resultIntent.putExtra("jobTitle", jobTitle);
-        resultIntent.putExtra("startDate", startDate);
-        resultIntent.putExtra("endDate", endDate);
-        resultIntent.putExtra("responsibilities", responsibilities);
-        resultIntent.putExtra("technologies", selectedTechnologies.toArray(new String[0]));
-        startActivity(resultIntent);
+        // Save experience details in SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("ExperienceData", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("companyName", companyName);
+        editor.putString("jobTitle", jobTitle);
+        editor.putString("startDate", startDate);
+        editor.putString("endDate", endDate);
+        editor.putString("responsibilities", responsibilities);
+        editor.putString("technologies", String.join(", ", selectedTechnologies)); // Convert ArrayList to a single String
+        editor.apply();
 
-        // Open ActivityHome
-        Intent homeIntent = new Intent(ActivityExper.this, ActivityHome.class);
-        startActivity(homeIntent);
+        Toast.makeText(this, "Experience details saved successfully", Toast.LENGTH_SHORT).show();
 
-        // Finish current activity
-        finish();
     }
 }

@@ -1,10 +1,12 @@
 package com.example.cv_builder;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+
+import java.util.ArrayList;
 public class ActivityRef extends AppCompatActivity {
 
     EditText etRef1Name, etRef1JobTitle, etRef1Company, etRef1Email, etRef1Phone;
@@ -21,13 +27,7 @@ public class ActivityRef extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ref);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         // Initialize EditText fields for Reference 1
         etRef1Name = findViewById(R.id.etRef1Name);
@@ -43,50 +43,30 @@ public class ActivityRef extends AppCompatActivity {
         etRef2Email = findViewById(R.id.etRef2Email);
         etRef2Phone = findViewById(R.id.etRef2Phone);
 
-        // Initialize Save button
         btnSaveReferences = findViewById(R.id.btnSaveReferences);
 
-        btnSaveReferences.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveReferences();
-            }
-        });
+        btnSaveReferences.setOnClickListener(v -> saveReferences());
     }
 
     private void saveReferences() {
         // Get user input values
-        String ref1Name = etRef1Name.getText().toString().trim();
-        String ref1JobTitle = etRef1JobTitle.getText().toString().trim();
-        String ref1Company = etRef1Company.getText().toString().trim();
-        String ref1Email = etRef1Email.getText().toString().trim();
-        String ref1Phone = etRef1Phone.getText().toString().trim();
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        String ref2Name = etRef2Name.getText().toString().trim();
-        String ref2JobTitle = etRef2JobTitle.getText().toString().trim();
-        String ref2Company = etRef2Company.getText().toString().trim();
-        String ref2Email = etRef2Email.getText().toString().trim();
-        String ref2Phone = etRef2Phone.getText().toString().trim();
+        editor.putString("ref1_name", etRef1Name.getText().toString().trim());
+        editor.putString("ref1_job", etRef1JobTitle.getText().toString().trim());
+        editor.putString("ref1_company", etRef1Company.getText().toString().trim());
+        editor.putString("ref1_email", etRef1Email.getText().toString().trim());
+        editor.putString("ref1_phone", etRef1Phone.getText().toString().trim());
 
-        // Create intent to send data to ActivityResult
-        Intent intent = new Intent(ActivityRef.this, ActivityResult.class);
-        intent.putExtra("ref1_name", ref1Name);
-        intent.putExtra("ref1_job", ref1JobTitle);
-        intent.putExtra("ref1_company", ref1Company);
-        intent.putExtra("ref1_email", ref1Email);
-        intent.putExtra("ref1_phone", ref1Phone);
+        editor.putString("ref2_name", etRef2Name.getText().toString().trim());
+        editor.putString("ref2_job", etRef2JobTitle.getText().toString().trim());
+        editor.putString("ref2_company", etRef2Company.getText().toString().trim());
+        editor.putString("ref2_email", etRef2Email.getText().toString().trim());
+        editor.putString("ref2_phone", etRef2Phone.getText().toString().trim());
 
-        intent.putExtra("ref2_name", ref2Name);
-        intent.putExtra("ref2_job", ref2JobTitle);
-        intent.putExtra("ref2_company", ref2Company);
-        intent.putExtra("ref2_email", ref2Email);
-        intent.putExtra("ref2_phone", ref2Phone);
+        editor.apply();
 
-        startActivity(intent);
-
-        // Navigate to ActivityHome
-        Intent homeIntent = new Intent(ActivityRef.this, ActivityHome.class);
-        startActivity(homeIntent);
-        finish(); // Close the current activity
+        Toast.makeText(ActivityRef.this, "References saved", Toast.LENGTH_SHORT).show();
     }
 }
