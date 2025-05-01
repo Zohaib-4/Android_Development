@@ -1,7 +1,6 @@
 package com.example.scheduler;
 
 public class TaskDatabaseHelper extends SQLiteOpenHelper {
-
     private static final String DB_NAME = "task_db";
     private static final int DB_VERSION = 1;
 
