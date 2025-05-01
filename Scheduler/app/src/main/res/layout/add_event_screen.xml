@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Add New Event Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Event"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Event Name -->
+        <EditText
+            android:id="@+id/eventName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Event name*"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:inputType="text" />
+
+        <!-- Event Description -->
+        <EditText
+            android:id="@+id/eventNote"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Type the note here..."
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="12dp" />
+
+        <!-- Date -->
+        <EditText
+            android:id="@+id/eventDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Date"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:inputType="date" />
+
+        <!-- Time Selection -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/startTime"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="Start time"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:inputType="time" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/endTime"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:hint="End time"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <!-- Reminder Toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Reminds me"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/reminderSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Category Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Category"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoryChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBrainstorm"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Brainstorm" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDesign"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Design" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWorkout"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Workout" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAddNew"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="+ Add new" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Create Event Button -->
+        <Button
+            android:id="@+id/createEventButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Event"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
